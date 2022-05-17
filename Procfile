@@ -1,1 +1,1 @@
-web: gunicorn postit-fd.wsgi
+web: gunicorn postit.wsgi
