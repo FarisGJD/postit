@@ -36,8 +36,9 @@ class Categories(models.Model):
 
 
 class Reply(models.Model):
+    '''User reply to commnets'''
     postit = models.ForeignKey(Postit, on_delete=models.CASCADE, related_name='comments')
-    username = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_comment')
+    username = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_reply')
     comment = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
 
@@ -49,6 +50,7 @@ class Reply(models.Model):
 
 
 class Comments(models.Model):
+    '''User inital comments to post''' 
     postit = models.ForeignKey(Postit, on_delete=models.CASCADE, related_name='comments')
     username = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_comment')
     comment = models.TextField()
