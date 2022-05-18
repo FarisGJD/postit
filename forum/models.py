@@ -31,7 +31,34 @@ class Categories(models.Model):
     '''User generated category model dervied from the Postit model''' 
     category = models.ManyToManyField(Postit, related_name='user_categories', blank=True)
 
-    def list_of_categories(self): 
-        return self.category 
-        
+    def list_of_categories(self):
+        return self.category
+
+
+class Reply(models.Model):
+    postit = models.ForeignKey(Postit, on_delete=models.CASCADE, related_name='comments')
+    username = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_comment')
+    comment = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def _str_(self):
+        return f"Comment {self.comment} by {self.username}"
+
+
+class Comments(models.Model):
+    postit = models.ForeignKey(Postit, on_delete=models.CASCADE, related_name='comments')
+    username = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_comment')
+    comment = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    replies = models.ManyToManyField(Reply, blank=True)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def _str_(self):
+        return f"Comment {self.comment} by {self.username}"
 
