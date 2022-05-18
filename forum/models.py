@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-CATEGORY = []
-
 
 class Postit(models.Model):
     '''Django database model for post creation'''
@@ -13,10 +11,10 @@ class Postit(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="forum_posts")
     generated_on = models.DateTimeField(auto_now_add=True)
     body = models.TextField()
-    link = models.URLField(max_length=200, unique=True, blank=True)
+    link = models.URLField(max_length=200, bull=True, blank=True)
     image = CloudinaryField('image', default='placeholder')
-    category = models.CharField(max_length=15, choices=CATEGORY)
-    votes = models.ManyToManyField(User, related_name='thread_votes', blank=True)
+    topic = models.CharField(max_length=20, unique=True)
+    votes = models.ManyToManyField(User, related_name='post_votes', blank=True)
 
     class Meta:
         '''Orders Posts based on date & time generated'''
@@ -27,7 +25,13 @@ class Postit(models.Model):
 
     def upvote_count(self):
         return self.votes.count()
-    
-    def _selected_category(self):
-        return str(self.category)
+
+
+class Categories(models.Model):
+    '''User generated category model dervied from the Postit model''' 
+    category = models.ManyToManyField(Postit, related_name='user_categories', blank=True)
+
+    def list_of_categories(self): 
+        return self.category 
+        
 
