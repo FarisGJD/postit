@@ -17,6 +17,7 @@ class PostitAdmin(SummernoteModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
 
     search_fields = ['category']
+    prepopulated_fields = {'slug': ('category', )}
 
 
 @admin.register(Comment)
@@ -40,4 +41,3 @@ class ReplyAdmin(admin.ModelAdmin):
     list_display = (
         'username', 'comment', 'postit', 'date_created'
         )
-

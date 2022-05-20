@@ -9,7 +9,7 @@ class Category(models.Model):
     '''User generated category model dervied from the Postit model'''
     category = models.CharField(max_length=50)
     slug = models.SlugField(max_length=300, unique=True, blank=True)
-    
+
     def __str__(self):
         return str(self.category)
 
