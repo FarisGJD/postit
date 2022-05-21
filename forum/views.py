@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic 
-from .models import Postit 
+from .models import Postit
 
 
 def base_template(request):
@@ -8,10 +8,8 @@ def base_template(request):
 
 
 def get_postit_items(request):
-    items = Item.objects.all()
+    items = Postit.objects.all()
     context = {
-        'items': items 
+        'items': items
     }
-    return render(request, 'create-postit.html')
-
-
+    return render(request, 'create-postit.html', context)
