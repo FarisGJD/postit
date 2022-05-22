@@ -10,54 +10,90 @@
 html{
     background-color: #000000; 
     color: #ffffff;
+    font-size: 62.5%;
 }
 
-/* Logo */ 
+/* Logo &  Navigation Bar */ 
 
 #logo {
-    font-family: 'Rubik Beastly', cursive; 
-    /* color: #320064;  */
-    font-size: 60px;
-    /* text-shadow: 5px 5px #ffffff;  */
     margin-left: 20px;
-    letter-spacing: 10px;
+    font-size: 4rem;
 }
 
-
-/* Navbar */ 
+.fa-note-sticky {
+    font-size: 4.5rem;
+}
 
 header {
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
     align-items: center;
-    font-family: 'Rubik Beastly', cursive; 
+    position: sticky;
+    top: 0;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    font-size: 1.7rem;
+    text-transform: uppercase;
 }
 
 header a {
     text-decoration: none;
-    color: inherit;
+    color: inherit; 
 }
 
 #navbar li {
-    list-style-type: none;
-    display: inline-block;
     padding: 5px;
 }
 
-/* Footer */ 
+#cta-button {
+    margin-right: 20px;
+    background-color: red;
+    border-radius: 3rem;
+    padding: 2rem;
 
-footer {
-    display: flex; 
-    justify-content: space-between; 
 }
 
-footer a {
-    color: inherit;
-    text-decoration: none;
-    
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
 }
 
 footer li {
-    list-style-type: none;
-    display: inline-block; 
+    display: inline-block;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fa-copyright {
+    font-size: 1rem;
+}
+
+.d {
+    height: 1000vh; 
 }
