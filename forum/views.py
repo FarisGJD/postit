@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django.views import generic 
+# from django.views import generic 
 from .models import Postit
 
 
-def base_template(request):
-    return render(request, 'base.html')
+def home_template(request):
+    return render(request, 'index.html')
 
 
 def get_postit_items(request):
@@ -12,4 +12,8 @@ def get_postit_items(request):
     context = {
         'items': items
     }
-    return render(request, 'create-postit.html', context)
+    return render(request, 'postit.html', context)
+
+
+def profile_tempalte(request):
+    return render(request, 'profile.html')

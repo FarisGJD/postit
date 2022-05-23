@@ -11,7 +11,7 @@
 <body>
     <header>
         <!-- Logo -->
-        <a>
+        <a href="{% url 'home' %}">
             <h1 id="logo"><i class="fa-solid fa-note-sticky"></i> POSTit</h1>
         </a>
 
@@ -19,13 +19,13 @@
         <nav id="navbar">
             <ul>
                 <li>
-                    <a href="#">HOME</a>
+                    <a href="{% url 'home' %}">HOME</a>
+                </li> 
+                <li>
+                    <a href="{% url 'postit' %}">POSTit</a>
                 </li>
                 <li>
-                    <a href="#">POSTit</a>
-                </li>
-                <li>
-                    <a href="#">PROFILE</a>
+                    <a href="{% url 'profile' %}">PROFILE</a>
                 </li>
 
             </ul>
@@ -36,6 +36,11 @@
             </li>
         </div>
     </header>
+
+    <!-- Main Content -->
+    {% block body %}
+       <!-- Inserts Other Tempaltes Content -->
+    {% endblock body %}
 
     <div class="d"></div>
     <!-- Footer -->
