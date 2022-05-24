@@ -180,15 +180,17 @@ footer a {
 /* Postit Page Header */
 
 hr {
-    border: 0.5px solid #320046;
+    border: 0.7px solid #320046;
     width: 70%;
 }
 
 #postit-form-container {
-    width:  90%;
+    width:  70%;
     height: 50rem;
-    background-color: #320046;
+    background-color: #2d3032;
     margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 

@@ -6,29 +6,26 @@
 </div>
 <hr>
 
-<div id="postit-form-container">
-    <div id="postit-form-contnet">
-        <form>
-            <label for="title" id="title-label">Title</label>
-            <input type="text" id="title-label" placeholder="Title">
+<section aria-label="create content form">
+    <div id="postit-form-container">
+        <div id="postit-form-contnet">
+            <form>
+                <input type="text" placeholder="Title" aria-label="create title">
 
-            <label for="content" id="content-label">Content</label>
-            <textarea type="text" id="content-label" placeholder="Content"></textarea>
+                <textarea type="text" placeholder="Content" aria-label="create content"></textarea>
 
-            <label for="category" id="category-label">Category</label>
-            <input type="text" id="category-label" placeholder="Category">
+                <input type="text" placeholder="Category" aria-label="define content category">
 
-            <label for="image" id="image-label">Image</label>
-            <input type="image" id="image-label" placeholder="Image">
+                <input type="image" id="image-label" placeholder="Image" aria-label="upload image">
 
-            <label for="url" id="url-label">URL</label>
-            <input type="url" placeholder="Enter an https:// URL:">
-            
-            <input type="submit" placeholder="POST">
-        </form>
-
+                <input type="url" placeholder="Enter an https:// URL:" aria-label="insert url">
+                
+                <input type="submit" placeholder="POST" aria-label="post content">
+            </form>
+        </div>
     </div>
-</div>
+</section>
+
 
 
 {% endblock body %}
