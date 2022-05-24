@@ -167,15 +167,34 @@ footer a {
 
 /* Home Page Header */
 
-.home-page-mast {
-    width: 94%; 
-    height: 40px; 
-    background-color: #320046;
-    align-self: center;
+#trending-page-container {
+    width: 100%;
     margin: auto;
 }
 
+.home-page-mast {
+    width: 94%;
+    height: 50px;
+    background-color: #320046;
+    margin: auto;
+}
 
+.thread-content-container {
+    width: 94%; 
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.thread {
+    width: 600px;
+    height: 600px;
+    background-color: #000000;
+    margin:40px;
+}
 
 /* Postit Page Header */
 
