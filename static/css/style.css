@@ -183,3 +183,18 @@ hr {
     border: 0.5px solid #320046;
     width: 70%;
 }
+
+#postit-form-container {
+    width:  90%;
+    height: 50rem;
+    background-color: #320046;
+    margin: auto;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
