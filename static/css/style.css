@@ -191,6 +191,7 @@ footer a {
     margin:40px;
     border-radius: 5px;
     border: 3px solid #320046;
+    overflow: hidden;
 }
 
 .thread-meta-container{
@@ -199,7 +200,7 @@ footer a {
     justify-content: space-between;
     margin: 10px;
     background-color: red;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .thread-meta-content {
@@ -224,6 +225,12 @@ footer a {
 .thread-content {
     background-color: green;
     font-size: 1.2rem;
+}
+
+.thread-image {
+    background-color: #2d3032;
+    width: 95%;
+    height: 100px;
 }
 
 /* Postit Page Header */
