@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Roboto&display=swap');
+
 /* Global */ 
 
 * {
@@ -21,12 +22,23 @@ body {
 #logo {
     margin-left: 60px;
     font-family: 'Raleway', sans-serif;
-    font-size: 5.3rem;
+    font-size: 6.5rem;
+    text-shadow: 2px 2px #5f0a87;
+    font-weight: 900;
 }
 
 #logo span {
-    font-size: 3.3rem;
-    color: #5f0a87; 
+    font-size: 4.5rem;
+    color: #5f0a87;
+    text-shadow: none; 
+    background-image: linear-gradient(to right,#5f0a87,#320046);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 header {
@@ -50,10 +62,8 @@ header ul {
 header li {
     display: inline-block;
     font-size: 1.7rem;
-    font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
-    font-family: 'Raleway';
-    background-color: #320046;
+    font-family: 'Raleway', sans-serif;
     margin: 5px;
 }
 
@@ -66,15 +76,45 @@ header a {
     padding: 5px;
 }
 
+#navbar li:hover {
+    border-bottom: 1.5px solid #5f0a87;
+    background-image: linear-gradient(to right,#5f0a87,#320046);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
 #cta-button {
     margin-right: 60px;
     background: linear-gradient(to right,#5f0a87,#320046); 
     border-radius: 3rem;
     padding: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px #5f0a87; 
 }
 
 #cta-button li {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+#cta-button:hover {
+    background: linear-gradient(to left,#5f0a87,#320046);
+}
+
+#cta-button:active {
+    transform: translateY(1px);
+  }
+
+
+
+
+
+.fa-note-sticky {
+    font-size: 2rem;
 }
 
 /* Footer */
@@ -88,6 +128,7 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    background-color: #000000;
 }
 
 footer ul {
