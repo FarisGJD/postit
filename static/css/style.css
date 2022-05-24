@@ -179,13 +179,19 @@ footer a {
 
 /* Postit Page Header */
 
+#postit-heading {
+    margin-left: 500px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
 hr {
     border: 0.7px solid #320046;
-    width: 70%;
+    width: 50%;
 }
 
 #postit-form-container {
-    width:  70%;
+    width:  50%;
     height: 50rem;
     background-color: #2d3032;
     margin: auto;
@@ -197,6 +203,13 @@ hr {
 form {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 95%;
     margin: auto;
+}
+
+.input-general {
+    padding: 10px;
+    border: solid 2px #320046; 
+    border-radius: 5px;
+    margin-top: 15px;
 }
