@@ -110,10 +110,6 @@ header a {
     transform: translateY(1px);
   }
 
-
-
-
-
 .fa-note-sticky {
     font-size: 2rem;
 }
@@ -169,6 +165,21 @@ footer a {
     font-size: 3rem;
 }
 
-.d {
-    height: 1000vh; 
+/* Home Page Header */
+
+.home-page-mast {
+    width: 94%; 
+    height: 40px; 
+    background-color: #320046;
+    align-self: center;
+    margin: auto;
+}
+
+
+
+/* Postit Page Header */
+
+hr {
+    border: 0.5px solid #320046;
+    width: 70%;
 }

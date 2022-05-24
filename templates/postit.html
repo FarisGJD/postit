@@ -1,1 +1,23 @@
 {% extends 'base.html' %}
+
+{% block body %}
+<div>
+    <h2>Create A Post</h2>
+</div>
+<hr>
+
+<div id="postit-form-container">
+    <div id="postit-form-contnet">
+        <form>
+            <input type="text" placeholder="Title">
+            <textarea type="text" placeholder="Content"></textarea>
+            <input type="image" placeholder="Image">
+            <input type="url" placeholder="Enter an https:// URL:">
+            <input type="submit" placeholder="POST">
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock body %}
