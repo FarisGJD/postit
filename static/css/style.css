@@ -15,7 +15,7 @@ html{
 body {
     margin: 0; 
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cabin Sketch', cursive;
 }
 
 #background-image {
@@ -187,6 +187,7 @@ footer a {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     border: 1px solid rgba(0,0,0,.25);
+    color: #000000;
 }
 
 .thread1 {
@@ -252,19 +253,15 @@ footer a {
     background-color: #dcff46;
 }
 
-
-
 .thread-meta-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 10px;
-    background-color: red;
     font-size: 1.2rem;
 }
 
 .thread-meta-content {
-    background-color: yellowgreen;
     border-radius: 5px;
     margin: 5px;
 }
@@ -273,22 +270,18 @@ footer a {
     margin: 10px;
 }
 .thread-heading{
-    background-color: brown;
     font-size: 1.3rem;
 }
 
 .thread-link {
-    background-color: #320046;
     font-size: 1.2rem;
 }
 
 .thread-content {
-    background-color: green;
     font-size: 1.2rem;
 }
 
 .thread-image {
-    background-color: #2d3032;
     width: 95%;
     height: 100px;
 }
