@@ -2,10 +2,12 @@
 
 {% block body %}
 <div id="postit-page-container">
-    <div id="postit-heading">
-        <h2>Create A Post</h2>
+    <div class="postit-heading-container">
+        <div id="postit-heading">
+            <h2>Create A Post</h2>
+        </div>
+        <hr>
     </div>
-    <hr>
     
     <section aria-label="create content form">
         <div id="postit-form-container">
@@ -13,15 +15,15 @@
                 <form action="#">
                     <input class="input-general" type="text" placeholder="Title" aria-label="create title" required>
     
-                    <textarea class="input-general" type="text" placeholder="Content" aria-label="create content"></textarea>
-    
-                    <input class="input-general" type="text" placeholder="Category" aria-label="define content category" required>
-    
-                    <input class="input-general" type="file" placeholder="Image" aria-label="upload image">
-    
+                    <textarea class="input-general content" type="text" placeholder="Content" aria-label="create content"></textarea>
+
                     <input class="input-general" type="url" placeholder="Enter an https:// URL:" aria-label="insert url">
-                    
-                    <input class="input-general" type="submit" placeholder="POST" aria-label="post content">
+
+                    <div class="category-image-container">
+                        <input class="input-general" type="text" placeholder="Category" aria-label="define content category" required>
+                        <input class="input-general" type="file" placeholder="Image" aria-label="upload image">
+                        <input class="input-general" type="submit" placeholder="POST" aria-label="post content">
+                    </div>                   
                 </form>
             </div>
         </div>
