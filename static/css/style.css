@@ -7,7 +7,6 @@
 }
 
 html{
-    background-color: #000000; 
     color: #ffffff;
     font-size: 62.5%;
 }
@@ -18,9 +17,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#background-image {
+    height: 100%;
+    width: 100vw;
+    background-image: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg");
+}
+
+
 a {
     text-decoration: none;
     color: inherit; 
+    text-shadow: 0 3px #000000;
 }
 
 ul {
@@ -35,22 +42,14 @@ ul {
     margin-left: 60px;
     font-family: 'Raleway', sans-serif;
     font-size: 6.5rem;
-    text-shadow: 2px 2px #5f0a87;
     font-weight: 900;
+    text-shadow: 0 5px #42280e;
 }
 
 #logo span {
     font-size: 4.5rem;
-    color: #5f0a87;
     text-shadow: none; 
-    background-image: linear-gradient(to right,#5f0a87,#320046);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+    text-shadow: 0 4px #000000;
 }
 
 header {
@@ -60,7 +59,11 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: #000000;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
+    border-image-slice: 31 29;
+    border-image-width: 31px 29px;
 }
 
 header li {
@@ -76,24 +79,16 @@ header li {
 }
 
 #navbar li:hover {
-    border-bottom: 1.5px solid #5f0a87;
-    background-image: linear-gradient(to right,#5f0a87,#320046);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+    border-bottom: 1.5px solid #000000;
 }
 
 #cta-button {
     margin-right: 60px;
-    background: linear-gradient(to right,#5f0a87,#320046); 
     border-radius: 3rem;
+    border: solid 1px #000000; 
     padding: 2rem;
     cursor: pointer;
-    box-shadow: 0 2px #5f0a87; 
+    box-shadow: 0 2px #000000; 
 }
 
 #cta-button li {
@@ -101,7 +96,7 @@ header li {
 }
 
 #cta-button:hover {
-    background: linear-gradient(to left,#5f0a87,#320046);
+  background: #000000; 
 }
 
 #cta-button:active {
@@ -123,7 +118,6 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #000000;
 }
 
 footer li {
@@ -154,7 +148,6 @@ footer a {
 }
 
 .fab {
-    color: #320046;
     font-size: 3rem;
 }
 
@@ -166,9 +159,9 @@ footer a {
 }
 
 .home-page-mast {
-    width: 94%;
+    width: 90%;
     height: 50px;
-    background-color: #320046;
+    background-color: #000000;
     margin: auto;
 }
 
@@ -177,7 +170,6 @@ footer a {
 .thread-content-container {
     width: 94%; 
     height: 100%;
-    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -252,7 +244,11 @@ hr {
     background-color: #2d3032;
     margin: auto;
     margin-top: 20px;
-    border-radius: 5px;
+    /* border-radius: 5px;
+    border: 31px solid transparent;
+    border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
+    border-image-slice: 31 29;
+    border-image-width: 31px 29px; */
 }
 
 
