@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Londrina+Sketch&display=swap');
 
 /* Global */ 
 
@@ -27,7 +28,6 @@ body {
 a {
     text-decoration: none;
     color: inherit; 
-    text-shadow: 0 2px #2a1708, 0 4px #000000;
 }
 
 ul {
@@ -41,15 +41,17 @@ ul {
 #logo {
     margin-left: 60px;
     font-family: 'Raleway', sans-serif;
-    font-size: 6.5rem;
+    font-size: 8rem;
     font-weight: 900;
-    text-shadow: 0 3px #2a1708, 0 5px #000000;
+    text-shadow: 0 5px #1F51FF, 0 8px #000000; 
+    font-family: 'Londrina Sketch', cursive;
 }
 
 #logo span {
-    font-size: 4.5rem;
+    font-size: 6rem;
     text-shadow: none; 
-    text-shadow: 0 3px #2a1708, 0 5px #000000;
+    text-shadow: 0 4px #FF3131, 0 8px #000000;
+    font-family: 'Cabin Sketch', cursive;
 }
 
 header {
@@ -63,10 +65,12 @@ header {
 
 header li {
     display: inline-block;
-    font-size: 1.7rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     font-family: 'Raleway', sans-serif;
     margin: 5px;
+    font-family: 'Cabin Sketch', cursive;
+    text-shadow: 0 3px #FF5F1F, 0 6px #000000;
 }
 
 #navbar li {
@@ -77,22 +81,29 @@ header li {
     border-bottom: 1.5px solid #000000;
 }
 
+#navbar li:active {
+    transform: translateY(5px);
+}
+
 #cta-button {
     margin-right: 60px;
-    border-radius: 3rem;
-    border: solid 1px #2a1708; 
     padding: 2rem;
     cursor: pointer;
-    box-shadow: 0 1px #2a1708; 
+    border-radius: 5px;
+    border: 20px solid transparent;
+    border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
+    border-image-slice: 31 29;
+    border-image-width: 31px 29px;
+}
+
+#cta-button:hover {
+    transform: translateY(5px);
 }
 
 #cta-button li {
-    font-size: 1.3rem;
+    font-size: 2rem;
+    text-shadow: 0 2px #0FFF50, 0 4px #000000;
 }
-
-#cta-button:active {
-    transform: translateY(5px);
-  }
 
 .fa-note-sticky {
     font-size: 2rem;
@@ -170,12 +181,78 @@ footer a {
 .thread {
     width: 400px;
     height: 400px;
-    background-color: #000000;
     margin:40px;
-    border-radius: 5px;
-    border: 3px solid #320046;
     overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    border: 1px solid rgba(0,0,0,.25);
 }
+
+.thread1 {
+    transform: rotate(-0.5deg);
+    -webkit-transform: rotate(-0.5deg);
+    -moz-transform: rotate(-0.5deg);
+    background-color: #feff9c; 
+}
+
+.thread2 {
+    transform: rotate(0.5deg);
+    -webkit-transform: rotate(0.5deg);
+    -moz-transform: rotate(0.5deg);
+    background-color: #ff65a3;
+}
+
+.thread3 {
+    transform: rotate(1.0deg);
+    -webkit-transform: rotate(1.0deg);
+    -moz-transform: rotate(1.0deg);
+    background-color: #7afcff;
+}
+
+.thread4 {
+    transform: rotate(-1.0deg);
+    -webkit-transform: rotate(-1.0deg);
+    -moz-transform: rotate(-1.0deg);
+    background-color: #ffa930;
+}
+
+.thread5 {
+    transform: rotate(-1.5deg);
+    -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    background-color: #74ed4b;
+}
+
+.thread6 {
+    transform: rotate(1.5deg);
+    -webkit-transform: rotate(1.5deg);
+    -moz-transform: rotate(1.5deg);
+    background-color: #ff7455;
+}
+
+.thread7 {
+    transform: rotate(2.0deg);
+    -webkit-transform: rotate(2.0deg);
+    -moz-transform: rotate(2.0deg);
+    background-color: #1ba8b1;
+}
+
+.thread8 {
+    transform: rotate(-2.0deg);
+    -webkit-transform: rotate(-2.0deg);
+    -moz-transform: rotate(-2.0deg);
+    background-color: #ff0079;
+}
+
+.thread9 {
+    transform: rotate(0.5deg);
+    -webkit-transform: rotate(0.5deg);
+    -moz-transform: rotate(0.5deg);
+    background-color: #dcff46;
+}
+
+
 
 .thread-meta-container{
     display: flex;
