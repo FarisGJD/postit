@@ -27,7 +27,7 @@ body {
 a {
     text-decoration: none;
     color: inherit; 
-    text-shadow: 0 3px #000000;
+    text-shadow: 0 2px #2a1708, 0 4px #000000;
 }
 
 ul {
@@ -43,13 +43,13 @@ ul {
     font-family: 'Raleway', sans-serif;
     font-size: 6.5rem;
     font-weight: 900;
-    text-shadow: 0 5px #42280e;
+    text-shadow: 0 3px #2a1708, 0 5px #000000;
 }
 
 #logo span {
     font-size: 4.5rem;
     text-shadow: none; 
-    text-shadow: 0 4px #000000;
+    text-shadow: 0 3px #2a1708, 0 5px #000000;
 }
 
 header {
@@ -59,11 +59,6 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
-    border-image-slice: 31 29;
-    border-image-width: 31px 29px;
 }
 
 header li {
@@ -85,22 +80,18 @@ header li {
 #cta-button {
     margin-right: 60px;
     border-radius: 3rem;
-    border: solid 1px #000000; 
+    border: solid 1px #2a1708; 
     padding: 2rem;
     cursor: pointer;
-    box-shadow: 0 2px #000000; 
+    box-shadow: 0 1px #2a1708; 
 }
 
 #cta-button li {
     font-size: 1.3rem;
 }
 
-#cta-button:hover {
-  background: #000000; 
-}
-
 #cta-button:active {
-    transform: translateY(1px);
+    transform: translateY(5px);
   }
 
 .fa-note-sticky {
@@ -227,28 +218,36 @@ footer a {
 
 /* Postit Page Header */
 
+#postit-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+}
+
 #postit-heading {
-    margin-left: 500px;
     font-size: 2rem;
     text-transform: uppercase;
+    text-shadow: 0 4px #000000;
+    background-color: blue;
 }
 
 hr {
-    border: 0.7px solid #320046;
+    border: 1px solid #000000;
     width: 50%;
 }
 
 #postit-form-container {
-    width:  50%;
+    width:  100%;
     height: 50rem;
-    background-color: #2d3032;
     margin: auto;
     margin-top: 20px;
-    /* border-radius: 5px;
+    border-radius: 5px;
     border: 31px solid transparent;
     border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
     border-image-slice: 31 29;
-    border-image-width: 31px 29px; */
+    border-image-width: 31px 29px;
+    background-color: green;
 }
 
 
@@ -261,7 +260,7 @@ form {
 
 .input-general {
     padding: 10px;
-    border: solid 2px #320046; 
+    border: solid 2px #000000; 
     border-radius: 5px;
     margin-top: 15px;
 }

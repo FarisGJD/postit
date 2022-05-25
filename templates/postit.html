@@ -1,30 +1,33 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div id="postit-heading">
-    <h2>Create A Post</h2>
-</div>
-<hr>
-
-<section aria-label="create content form">
-    <div id="postit-form-container">
-        <div id="postit-form-contnet">
-            <form action="#">
-                <input class="input-general" type="text" placeholder="Title" aria-label="create title" required>
-
-                <textarea class="input-general" type="text" placeholder="Content" aria-label="create content"></textarea>
-
-                <input class="input-general" type="text" placeholder="Category" aria-label="define content category" required>
-
-                <input class="input-general" type="file" placeholder="Image" aria-label="upload image">
-
-                <input class="input-general" type="url" placeholder="Enter an https:// URL:" aria-label="insert url">
-                
-                <input class="input-general" type="submit" placeholder="POST" aria-label="post content">
-            </form>
-        </div>
+<div id="postit-page-container">
+    <div id="postit-heading">
+        <h2>Create A Post</h2>
     </div>
-</section>
+    <hr>
+    
+    <section aria-label="create content form">
+        <div id="postit-form-container">
+            <div id="postit-form-contnet">
+                <form action="#">
+                    <input class="input-general" type="text" placeholder="Title" aria-label="create title" required>
+    
+                    <textarea class="input-general" type="text" placeholder="Content" aria-label="create content"></textarea>
+    
+                    <input class="input-general" type="text" placeholder="Category" aria-label="define content category" required>
+    
+                    <input class="input-general" type="file" placeholder="Image" aria-label="upload image">
+    
+                    <input class="input-general" type="url" placeholder="Enter an https:// URL:" aria-label="insert url">
+                    
+                    <input class="input-general" type="submit" placeholder="POST" aria-label="post content">
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
 
 
 
