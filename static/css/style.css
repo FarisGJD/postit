@@ -106,9 +106,6 @@ footer {
     flex-direction: column;
     font-size: 1.5rem;
     align-items: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     color: #000000;
 }
@@ -154,13 +151,6 @@ footer a {
 
 #trending-page-container {
     width: 100%;
-    margin: auto;
-}
-
-.home-page-mast {
-    width: 90%;
-    height: 50px;
-    background-color: #000000;
     margin: auto;
 }
 
@@ -321,7 +311,7 @@ hr {
 
 #postit-form-container {
     width:  40%;
-    height: 45rem;
+    height: 40%;
     margin: auto;
     margin-top: 20px;
     border-radius: 5px;
@@ -329,8 +319,8 @@ hr {
     border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
     border-image-slice: 31 29;
     border-image-width: 31px 29px;
+    margin-bottom: 120px;
 }
-
 
 form {
     display: flex;
@@ -339,9 +329,9 @@ form {
     margin: auto;
 }
 
-/* input:focus::placeholder {
-    color: blue; 
-} */
+input:focus::placeholder {
+    color: #000000; 
+}
 
 input::placeholder {
     color: #ffffff;
