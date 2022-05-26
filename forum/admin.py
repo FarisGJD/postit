@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Postit, Comment, Reply, Category
+from .models import Postit, Comment, Reply
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -7,17 +7,10 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostitAdmin(SummernoteModelAdmin):
 
     prepopulated_fields = {'slug': ('heading',)}
-    list_filter = ('generated_on', 'topic')
-    search_fields = ['heading', 'content', 'topic']
+    list_filter = ('generated_on')
+    search_fields = ['heading', 'content']
     list_display = ('heading', 'slug', 'generated_on')
     summernote_fields = ('body')
-
-
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-
-    search_fields = ['category']
-    prepopulated_fields = {'slug': ('category', )}
 
 
 @admin.register(Comment)
