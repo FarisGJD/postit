@@ -47,10 +47,8 @@ def postit_tempalte(request):
         body = request.POST.get('body_name')
         link = request.POST.get('url_name')
         image = request.POST.get('image_name')
-        topic = request.POST.get('category_name')
-        author_id = request.POST.get('author_id')
         Postit.objects.create(
-             author_id=author_id, heading=heading, body=body, link=link, image=image
+            heading=heading, body=body, link=link, image=image
             )
         return redirect('home')
 

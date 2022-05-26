@@ -7,7 +7,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostitAdmin(SummernoteModelAdmin):
 
     prepopulated_fields = {'slug': ('heading',)}
-    list_filter = ('generated_on')
+    list_filter = ['generated_on']
     search_fields = ['heading', 'content']
     list_display = ('heading', 'slug', 'generated_on')
     summernote_fields = ('body')
