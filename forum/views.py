@@ -17,9 +17,13 @@ def postit_list(request):
     return render(request, 'index.html', context)
 
 
-def profile_tempalte(request):
-    return render(request, 'profile.html')
+def profile_list(request):
+    postits = Postit.objects.all().order_by('-generated_on')
+    context = {
+        'postits': postits
+    }
+    return render(request, 'profile.html', context)
 
-
+    
 def postit_tempalte(request):
     return render(request, 'postit.html')

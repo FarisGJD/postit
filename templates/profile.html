@@ -13,26 +13,29 @@
 </div>
 
 <div class="thread-content-container user-posts-container">
-   
     <div class="thread thread1 user-posts">
+    {% for postit in postits %}
+    <p></p>
         <div class='profile-pin'></div>
         <a href="#">
             <div class="thread-body-container profile-thread-heading">
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, blanditiis quo. Quas perspiciatis modi et dolorum dicta, nam animi impedit error voluptatibus fugiat natus qui nostrum quod adipisci nulla totam?</h3>
+                <h3>{{ postit.heading }}</h3>
             </div>
         </a>
 
         <div class="thread-body-container profile-thread-content">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, doloremque! Impedit, minus numquam tempora, quisquam aliquid esse, ad corrupti eveniet ipsam perferendis suscipit obcaecati at accusantium vitae sed reiciendis velit?
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, doloremque! Impedit, minus numquam tempora, quisquam aliquid esse, ad corrupti eveniet ipsam perferendis suscipit obcaecati at accusantium vitae sed reiciendis velit?
-                Lorem quisquam aliquid esse, ad corrupti eveniet ipsam perferendis suscipit obcaecati at accusantium vitae sed reiciendis velit?
-            </p>
+            <p>{{ postit.body }}</p>
         </div>
 
         <div class="thread-body-container profile-thread-image">
-            <image>Picture</image>
+            <image>{{ postit.image.url }}</image>
         </div>
     </div>
+    {% if forloop.counter|divisibleby:9 %}
+
+    {% endif %}
+
+    {% endfor %}
 </div>
 
 {% endblock body %}
