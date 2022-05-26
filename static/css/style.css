@@ -70,7 +70,7 @@ header li {
     font-family: 'Raleway', sans-serif;
     margin: 5px;
     font-family: 'Cabin Sketch', cursive;
-    text-shadow: 0 3px #000000, 0 6px #000000;
+    text-shadow: 0 2px #000000, 0 4px #000000;
 }
 
 #navbar li {
@@ -96,15 +96,7 @@ header li {
 
 #cta-button:hover {
     transform: translateY(5px);
-}
-
-#cta-button li {
-    font-size: 2rem;
-    text-shadow: 0 2px #000000, 0 4px #000000;
-}
-
-.fa-note-sticky {
-    font-size: 2rem;
+    box-shadow: 2px 4px #ffffff;
 }
 
 /* Footer */
@@ -405,3 +397,36 @@ textarea::placeholder {
     width: 100%;
 }
 
+/* Profile Page */ 
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile-image-container {
+    background-color: #1ba8b1;
+    height: 250px;
+    width: 250px; 
+    background: url("../images/man-303792_1280.png") center center;
+    background-size: cover;
+}
+
+.profile-info-container {
+    font-size: 5rem;
+    font-family: 'Londrina Sketch', cursive;
+    height: 200px;
+    width: 20%;
+    margin-top: 60px;
+    text-shadow: 0 5px #000000;
+}
+
+.user-posts-container {
+    height: 30%;
+    background-color: #1ba8b1;
+}
+
+.user-posts {
+    background-color: #feff9c;
+}
