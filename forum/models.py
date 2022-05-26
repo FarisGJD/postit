@@ -25,7 +25,7 @@ class Postit(models.Model):
     generated_on = models.DateTimeField(auto_now_add=True)
     body = models.TextField()
     link = models.URLField(max_length=200, null=True, blank=True)
-    image = CloudinaryField('image', default='placeholder')
+    image = CloudinaryField('image')
     topic = models.ManyToManyField(
         Category, related_name='generated_category', blank=True
         )
