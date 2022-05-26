@@ -431,19 +431,15 @@ textarea::placeholder {
     height: 250px;
 }
 
-.thread-body-container {
-    margin: 10px;
-}
-
-.thread-heading{
+.profile-thread-heading{
     font-size: 0.8rem;
 }
 
-.thread-content {
+.profile-thread-content {
     font-size: 0.7rem;
 }
 
-.thread-image {
+.profile-thread-image {
     width: 92%;
     height: 100px;
 }

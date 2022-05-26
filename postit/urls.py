@@ -21,3 +21,4 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', include('forum.urls'), name='forum_url')
 ]
+

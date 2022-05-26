@@ -1,19 +1,25 @@
 from django.shortcuts import render
-# from django.views import generic 
+from django.views import generic 
 from .models import Postit
 
 
-def home_template(request):
-    return render(request, 'index.html')
+# class ThreadList(generic.ListView):
+#     model = Postit
+#     queryset = Postit.objects.all().order_by('-generated_on')
+#     template = 'index.html'
 
 
-def get_postit_items(request):
-    items = Postit.objects.all()
+def postit_list(request):
+    postits = Postit.objects.all().order_by('-generated_on')
     context = {
-        'items': items
+        'postits': postits
     }
-    return render(request, 'postit.html', context)
+    return render(request, 'index.html', context)
 
 
 def profile_tempalte(request):
     return render(request, 'profile.html')
+
+
+def postit_tempalte(request):
+    return render(request, 'postit.html')
