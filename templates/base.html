@@ -35,12 +35,19 @@
 
             </ul>
         </nav>
-        
+        {% if user.is_authenticated %}
+        <div id="cta-button">
+            <li>
+                <a href="#">LOGOUT <i class="fa-solid fa-note-sticky"></i></a>
+            </li>
+        </div>
+        {% else %}
         <div id="cta-button">
             <li>
                 <a href="#">LOGIN/SIGNUP <i class="fa-solid fa-note-sticky"></i></a>
             </li>
         </div>
+        {% endif %}
     </header>
 
     <!-- Main Content -->
