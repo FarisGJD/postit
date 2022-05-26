@@ -5,15 +5,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-class Category(models.Model):
-    '''User generated category model dervied from the Postit model'''
-    category = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=300, unique=True, blank=True)
-
-    def __str__(self):
-        return str(self.category)
-
-
 class Postit(models.Model):
     '''Django database model for post creation'''
     thread_starter = models.BooleanField(default=True)
@@ -26,9 +17,6 @@ class Postit(models.Model):
     body = models.TextField()
     link = models.URLField(max_length=200, null=True, blank=True)
     image = CloudinaryField('image')
-    topic = models.ManyToManyField(
-        Category, related_name='generated_category', blank=True
-        )
     votes = models.ManyToManyField(User, related_name='post_votes', blank=True)
 
     class Meta:

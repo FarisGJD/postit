@@ -257,7 +257,6 @@ footer a {
 
 .thread-meta-content {
     border-radius: 5px;
-    background-color: #ffffff;
 }
 
 .thread-body-container {
@@ -267,7 +266,10 @@ footer a {
     font-size: 1.7rem;
     font-family: 'Cabin Sketch', cursive;
     margin-bottom: 20px;
-    
+}
+
+.thread-heading:hover {
+    text-shadow: 4px 4px #ffffff;
 }
 
 .thread-link {
@@ -353,7 +355,7 @@ textarea::placeholder {
     padding: 7px;
     border: solid 2px #4c3221; 
     border-radius: 5px;
-    margin-top: 15px;
+    margin: 15px 0 15px 0;
     box-shadow: 2px 4px #000000;
 }
 

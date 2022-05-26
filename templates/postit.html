@@ -12,16 +12,16 @@
     <section aria-label="create content form">
         <div id="postit-form-container">
             <div id="postit-form-contnet">
-                <form action="#">
-                    <input class="input-general" id="form-heading" type="text" placeholder="Title" aria-label="create title" required>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input class="input-general" id="form-heading" type="text" name="heading_name" placeholder="Title" aria-label="create title" required>
     
-                    <textarea class="input-general content" id="form-content" type="text" placeholder="Content..." aria-label="create content"></textarea>
+                    <textarea class="input-general content" id="form-content"  name="body_name" type="text" placeholder="Content..." aria-label="create content"></textarea>
 
-                    <input class="input-general" id="form-url" type="url" placeholder="Enter an https:// URL:" aria-label="insert url">
+                    <input class="input-general" id="form-url" type="url"  name="url_name" placeholder="Enter an https:// URL:" aria-label="insert url">
 
                     <div class="category-image-container">
-                        <input class="input-general" id="form-category" type="text" placeholder="Category" aria-label="define content category" required>
-                        <input class="input-general" id="form-image " type="file" placeholder="Image" aria-label="upload image">
+                        <input class="input-general" id="form-image " type="file"  name="image_name" placeholder="Image" aria-label="upload image">
                         <input class="input-general" id="form-submit" type="submit" value="POST" placeholder="POST" aria-label="post content">
                     </div>                   
                 </form>
