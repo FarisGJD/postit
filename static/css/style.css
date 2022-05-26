@@ -290,6 +290,15 @@ footer a {
     height: 100px;
 }
 
+.thread-pin {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-left: 180px;
+    box-shadow: 0 2px #000000;
+}
+
 /* Postit Page Header */
 
 .postit-heading-container {
@@ -409,7 +418,8 @@ textarea::placeholder {
     background-color: #1ba8b1;
     height: 250px;
     width: 250px; 
-    background: url("../images/man-303792_1280.png") center center;
+    border-radius: 50%;
+    background: url("../images/0_0fClPmIScV5pTLoE.jpeg") center center;
     background-size: cover;
 }
 
@@ -418,15 +428,41 @@ textarea::placeholder {
     font-family: 'Londrina Sketch', cursive;
     height: 200px;
     width: 20%;
-    margin-top: 60px;
+    margin-left: 20px;
     text-shadow: 0 5px #000000;
 }
 
 .user-posts-container {
     height: 30%;
-    background-color: #1ba8b1;
 }
 
 .user-posts {
-    background-color: #feff9c;
+    width: 250px;
+    height: 250px;
+}
+
+.thread-body-container {
+    margin: 10px;
+}
+
+.thread-heading{
+    font-size: 0.8rem;
+}
+
+.thread-content {
+    font-size: 0.7rem;
+}
+
+.thread-image {
+    width: 92%;
+    height: 100px;
+}
+
+ .profile-pin {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-left: 120px;
+    box-shadow: 0 2px #000000;
 }
