@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block body %}
+
+<div class="allauth-heading-container">
+  <h2 class="allauth-heading">{% trans "LOGIN" %}</h2>
+  <hr>
+</div>
+
+<div class="allauth-info-container">
+  <p class="allauth-info">{% blocktrans %}Welcome back to Post{it}. To interact and upload content please log in. 
+    If you have not created an account yet, then please
+  <a href="{{ signup_url }}"><u>SIGN UP</u></a> first.{% endblocktrans %}</p>
+</div>
+
+
+<div class="allauth-form-container"> 
+<form class="form-style" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <button class="primaryAction" type="submit">{% trans "SIGN IN" %}</button>
+</form>
+
+</div>
+
+{% endblock %}

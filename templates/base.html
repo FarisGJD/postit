@@ -38,13 +38,13 @@
         {% if user.is_authenticated %}
         <div id="cta-button">
             <li>
-                <a href="#">LOGOUT <i class="fa-solid fa-note-sticky"></i></a>
+                <a href="{% url 'account_logout' %}">LOGOUT <i class="fa-solid fa-note-sticky"></i></a>
             </li>
         </div>
         {% else %}
         <div id="cta-button">
             <li>
-                <a href="#">LOGIN/SIGNUP <i class="fa-solid fa-note-sticky"></i></a>
+                <a href="{% url 'account_login' %}">LOGIN/SIGNUP <i class="fa-solid fa-note-sticky"></i></a>
             </li>
         </div>
         {% endif %}

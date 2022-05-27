@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block body %}
+
+<div class="allauth-heading-container">
+  <h2 class="allauth-heading">{% trans "SIGN UP" %}</h2>
+  <hr>
+</div>
+
+<div class="allauth-info-container">
+  <p class="allauth-info">{% blocktrans %}Welcome to POST{it}. To enjoy the sites full featues please create an account.
+     Already have an account? Then please <a href="{{ login_url }}"><u>SIGN IN</u></a>.{% endblocktrans %}</p>
+</div>
+
+<div class="allauth-form-container">
+  <form class="form-style" id="signup_form" method="post" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <button type="submit">{% trans "SIGN UP" %} &raquo;</button>
+  </form>
+</div>
+
+
+
+{% endblock %}

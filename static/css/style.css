@@ -95,8 +95,11 @@ header li {
 }
 
 #cta-button:hover {
-    transform: translateY(5px);
     box-shadow: 2px 4px #ffffff;
+}
+
+#cta-button:hover {
+    transform: translateY(5px);
 }
 
 /* Footer */
@@ -108,6 +111,9 @@ footer {
     align-items: center;
     width: 100%;
     color: #000000;
+    /* bottom: 0; 
+    left: 0; 
+    position: fixed; */
 }
 
 footer li {
@@ -304,6 +310,7 @@ footer a {
 
 #postit-heading {
     font-size: 3rem;
+    height: 100px;
     text-transform: uppercase;
     text-shadow: 0 8px #000000;
     font-family: 'Cabin Sketch', cursive;
@@ -456,4 +463,97 @@ textarea::placeholder {
     background-color: #ffffff;
     margin-left: 120px;
     box-shadow: 0 2px #000000;
+}
+
+/* Allauth - Login, Signup & Logout */ 
+
+.allauth-heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.allauth-heading {
+    font-size: 5rem;
+    height: 20px;
+    text-shadow: 4px 4px #000000;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.allauth-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.allauth-info {
+    font-size: 2rem;
+    width: 450px;
+    height: 50px;
+    text-shadow: 4px 4px #000000;
+    text-align: center;
+}
+
+.allauth-info a {
+    color: #000000;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #ffffff; 
+}
+
+.allauth-info a:hover {
+    color: #ffffff;
+    text-shadow: 4px 4px #000000; 
+    cursor: pointer;
+}
+
+.allauth-form-container {
+    width:  40%;
+    height: 40%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 31px solid transparent;
+    border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
+    border-image-slice: 31 29;
+    border-image-width: 31px 29px;
+    margin-bottom: 120px;
+}
+
+.form-style {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px #000000;
+    justify-content: center;
+}
+
+.form-style label {
+    text-align: center;
+}
+
+.form-style input {
+    width: 100%; 
+}
+
+.form-style button {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+    box-shadow: 2px 2px #000000;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.login button:hover {
+    transform: translateX(5px);
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
 }
