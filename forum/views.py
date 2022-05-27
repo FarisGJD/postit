@@ -1,12 +1,6 @@
 from django.shortcuts import render, redirect
-# from django.views import generic 
 from .models import Postit
-
-
-# class ThreadList(generic.ListView):
-#     model = Postit
-#     queryset = Postit.objects.all().order_by('-generated_on')
-#     template = 'index.html'
+from django.contrib.auth.decorators import login_required
 
 
 def postit_list(request):
@@ -14,25 +8,10 @@ def postit_list(request):
     context = {
         'postits': postits
     }
+    
     return render(request, 'index.html', context)
 
-
-# def full_thread(request, slug):
-#     thread = Postit.objects.all()
-#     post = get_object_or_404(thread, slug=slug)
-#     comments = post.comments.filter(approved=True).order_by('created_on')
-#     upvote = False
-#     if post.votes.filter(id=request.user.id).exists():
-#         upvote = True
-        
-#         return render(request, 'full-thread.html', {
-#             "post": post, 
-#             "comments": comments,
-#             "upvote": upvote
-#         },
-#         )
-
-
+@login_required()
 def profile_list(request):
     postits = Postit.objects.all().order_by('-generated_on')
     context = {
@@ -41,14 +20,18 @@ def profile_list(request):
     return render(request, 'profile.html', context)
 
 
+@login_required()
 def postit_tempalte(request):
     if request.method == 'POST':
+        author = request.user.pk
         heading = request.POST.get('heading_name')
+        # slug = heading
         body = request.POST.get('body_name')
         link = request.POST.get('url_name')
         image = request.POST.get('image_name')
         Postit.objects.create(
-            heading=heading, body=body, link=link, image=image
+            slug=heading,
+            author_id=author, heading=heading, body=body, link=link, image=image
             )
         return redirect('home')
 

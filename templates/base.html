@@ -13,67 +13,74 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>POST{it}</title>
 </head>
-<body id="background-image">
-    <header>
-        <!-- Logo -->
-        <a href="{% url 'home' %}">
-            <h1 id="logo">POST<span>{it}</span></h1>
-        </a>
-
-        <!-- Navigation Bar -->
-        <nav id="navbar">
-            <ul>
-                <li>
-                    <a href="{% url 'home' %}">HOME</a>
-                </li> 
-                <li>
-                    <a href="{% url 'postit' %}">POSTIT</a>
-                </li>
-                <li>
-                    <a href="{% url 'profile' %}">PROFILE</a>
-                </li>
-
-            </ul>
-        </nav>
-        {% if user.is_authenticated %}
-        <div id="cta-button">
-            <li>
-                <a href="{% url 'account_logout' %}">LOGOUT <i class="fa-solid fa-note-sticky"></i></a>
-            </li>
-        </div>
-        {% else %}
-        <div id="cta-button">
-            <li>
-                <a href="{% url 'account_login' %}">LOGIN/SIGNUP <i class="fa-solid fa-note-sticky"></i></a>
-            </li>
-        </div>
-        {% endif %}
-    </header>
-
-    <!-- Main Content -->
-    {% block body %}
-       <!-- Inserts Other Tempaltes Content -->
-    {% endblock body %}
+<body>
+    <!-- Background Image -->
+    <div id="background-image">
+        <header>
+            <!-- Logo -->
+            <a href="{% url 'home' %}">
+                <h1 id="logo">POST<span>{it}</span></h1>
+            </a>
     
-    <!-- Footer -->
-    <footer>
-        <ul>
-            <li class="left-icon">
-                <a href="https://twitter.com" rel="noopener" target="_blank" aria-label="Explore our Twitter page (opens in a new tab)"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="left-icon">
-                <a href="https://instagram.com" rel="noopener" target="_blank" aria-label="Explore our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="right-icon">
-                <a href="https://facebook.com" rel="noopener" target="_blank" aria-label="Explore our Facebook page (opens in a new tab)"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="right-icon">
-                <a href="https://youtube.com" rel="noopener" target="_blank" aria-label="Explore our Youtube page (opens in a new tab)"><i class="fab fa-youtube"></i></a>
-            </li>
-        </ul>
-            <a class="contact-postit" href="mailto:postit@postit.com">Contact Us: postit@postit.com</a>
-            <span class="contact-postit"><i class="far fa-copyright"></i> 2022 POST{it}</span>
-    </footer>
+            <!-- Navigation Bar -->
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">HOME</a>
+                    </li> 
+                    <li>
+                        <a href="{% url 'postit' %}">POSTIT</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'profile' %}">PROFILE</a>
+                    </li>
+    
+                </ul>
+            </nav>
+
+            <!-- Allauth -->
+            {% if user.is_authenticated %}
+            <div id="cta-button">
+                <li>
+                    <a href="{% url 'account_logout' %}">LOGOUT <i class="fa-solid fa-note-sticky"></i></a>
+                </li>
+            </div>
+            {% else %}
+            <div id="cta-button">
+                <li>
+                    <a href="{% url 'account_login' %}">LOGIN/SIGNUP <i class="fa-solid fa-note-sticky"></i></a>
+                </li>
+            </div>
+            {% endif %}
+        </header>
+    
+        <!-- Main Content -->
+        {% block body %}
+           <!-- Inserts Other Tempaltes Content -->
+        {% endblock body %}
+        
+        <!-- Footer -->
+        <footer>
+            <ul>
+                <li class="left-icon">
+                    <a href="https://twitter.com" rel="noopener" target="_blank" aria-label="Explore our Twitter page (opens in a new tab)"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="left-icon">
+                    <a href="https://instagram.com" rel="noopener" target="_blank" aria-label="Explore our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="right-icon">
+                    <a href="https://facebook.com" rel="noopener" target="_blank" aria-label="Explore our Facebook page (opens in a new tab)"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="right-icon">
+                    <a href="https://youtube.com" rel="noopener" target="_blank" aria-label="Explore our Youtube page (opens in a new tab)"><i class="fab fa-youtube"></i></a>
+                </li>
+            </ul>
+                <a class="contact-postit" href="mailto:postit@postit.com">Contact Us: postit@postit.com</a>
+                <span class="contact-postit"><i class="far fa-copyright"></i> 2022 POST{it}</span>
+        </footer>
+        
+    </div>
+    
 
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/cd2a226592.js" crossorigin="anonymous"></script>
