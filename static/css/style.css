@@ -111,9 +111,9 @@ footer {
     align-items: center;
     width: 100%;
     color: #000000;
-    /* bottom: 0; 
+    bottom: 0; 
     left: 0; 
-    position: fixed; */
+    position: fixed;
 }
 
 footer li {
@@ -550,10 +550,39 @@ textarea::placeholder {
     font-family: 'Cabin Sketch', cursive;
     font-size: 2rem;
     cursor: pointer;
+    border: 2px solid #000000; 
 }
 
 .login button:hover {
     transform: translateX(5px);
     color: #000000;
     text-shadow: 2px 2px #ffffff;
+}
+
+.sign-out-button-container {
+    width:  40%;
+    height: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.sign-out-button button {
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff;
+    text-shadow: 6px 6px #000000;
+    box-shadow: 5px 5px #000000;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 5rem;
+    cursor: pointer;
+    border: 5px solid #000000; 
+}
+
+.sign-out-button button:hover {
+    transform: translateX(5px);
+    color: #000000;
+    text-shadow: 2px 2px #ffffff;
+    box-shadow: 5px 5px #ffffff;
 }
