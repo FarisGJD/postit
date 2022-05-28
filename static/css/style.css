@@ -448,26 +448,49 @@ textarea::placeholder {
     text-shadow: 0 5px #000000;
 }
 
-.user-posts-container {
-    height: 30%;
-}
-
 .user-posts {
     width: 250px;
     height: 250px;
 }
 
+.edit-delete-button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit-delete-button button {
+    background-color: transparent;
+    border: 2px solid #000000;
+    color: #000000;
+    border-radius: 5px;
+    font-family: 'Cabin Sketch', cursive;
+    box-shadow: 2px 2px #000000;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px #ffffff;
+}
+
+.edit-delete-button button:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+}
+
 .profile-thread-heading{
-    font-size: 0.8rem;
+    font-size: 1rem;
+    height: 20px;
 }
 
 .profile-thread-content {
     font-size: 0.7rem;
+    overflow: scroll;
+    height: 25%;
 }
 
 .profile-thread-image {
-    width: 40%;
-    height: 100px;
+    width: 90%;
+    height: 80px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-pin {
@@ -478,6 +501,8 @@ textarea::placeholder {
     margin-left: 120px;
     box-shadow: 0 2px #000000;
 }
+
+
 
 /* Allauth - Login, Signup & Logout */ 
 

@@ -70,8 +70,7 @@ def delete_postit(request, postit_id):
 
 @login_required()
 def profile_list(request):
-    user = request.user.pk
-    postits = Postit.objects.all().filter(user).order_by('-generated_on')
+    postits = Postit.objects.all().order_by('-generated_on')
     context = {
         'postits': postits
     }

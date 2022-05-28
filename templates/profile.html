@@ -29,14 +29,16 @@
 
         <div class="thread-body-container profile-thread-image">
             <img src="{{ postit.image.url }}">
+        </div> 
+        <div class="edit-delete-button">
+            <a href="/edit/{{ postit.id }}">
+                <button>EDIT</button>
+            </a>
+            <a href="/delete/{{ postit.id }}">
+                <button>DELETE</button>
+            </a>
         </div>
     </div>
-    <a href="/edit/{{ postit.id }}">
-        <button>EDIT</button>
-    </a>
-    <a href="/delete/{{ postit.id }}">
-        <button>DELETE</button>
-    </a>
     {% endfor %}
 </div>
 
