@@ -3,12 +3,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.text import slugify
 
 
 class Postit(models.Model):
     '''Django database model for post creation'''
     thread_starter = models.BooleanField(default=True)
-    heading = models.CharField(max_length=300, unique=True)
+    heading = models.CharField(max_length=300, unique=True, blank=True)
     slug = models.SlugField(max_length=300, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="forum_posts"
@@ -22,6 +23,11 @@ class Postit(models.Model):
     class Meta:
         '''Orders Posts based on date & time generated'''
         ordering = ['-generated_on']
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.heading)
+        super(Postit, self).save(*args, **kwargs)
 
     def __str__(self):
         return str(self.heading)

@@ -22,7 +22,7 @@ def profile_list(request):
 
 
 @login_required()
-def postit_tempalte(request):
+def create_postit(request):
     if request.method == 'POST':
         author = request.user.pk
         heading = request.POST.get('heading_name')
@@ -30,9 +30,12 @@ def postit_tempalte(request):
         link = request.POST.get('url_name')
         image = request.POST.get('image_name')
         Postit.objects.create(
-            slug=heading,
-            author_id=author, heading=heading, body=body, link=link, image=image
+            author_id=author,
+            heading=heading,
+            body=body,
+            link=link,
+            image=image,
             )
         return redirect('home')
 
-    return render(request, 'postit.html')
+    return render(request, 'create-postit.html')
