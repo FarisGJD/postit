@@ -50,7 +50,7 @@ def create_postit(request):
 def edit_postit(request, postit_id):
     postit = get_object_or_404(Postit, id=postit_id)
     if request.method == "POST":
-        form = PostitForm(request.POST)
+        form = PostitForm(request.POST, instance=postit)
         if form.is_valid():
             form.save()
             return redirect('profile')
@@ -70,7 +70,8 @@ def delete_postit(request, postit_id):
 
 @login_required()
 def profile_list(request):
-    postits = Postit.objects.all().order_by('-generated_on')
+    user = request.user.pk
+    postits = Postit.objects.all().filter(user).order_by('-generated_on')
     context = {
         'postits': postits
     }
