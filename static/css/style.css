@@ -15,7 +15,7 @@ html{
 body {
     margin: 0; 
     padding: 0;
-       font-family: 'Cabin Sketch', cursive;
+    font-family: 'Cabin Sketch', cursive;
 }
 
 #background-image {
@@ -100,6 +100,14 @@ header li {
 
 #cta-button:hover {
     transform: translateY(5px);
+}
+
+.burger-menu-icon {
+    font-size: 3rem;
+    text-shadow: 2px 4px #000000;
+    margin: 40px; 
+    display: none; 
+    cursor: pointer; 
 }
 
 /* Footer */
@@ -591,4 +599,19 @@ textarea::placeholder {
     color: #000000;
     text-shadow: 2px 2px #ffffff;
     box-shadow: 5px 5px #ffffff;
+}
+
+/* Media Queries */ 
+
+@media only screen and (max-width: 800px) {
+    header {
+        flex-direction: row-reverse;
+        background-color: brown;
+    }
+
+    .burger-menu-container {
+        display: flex; 
+        flex-direction: column;
+    }
+
 }

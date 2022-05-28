@@ -11,6 +11,7 @@ def postit_list(request):
     
     return render(request, 'index.html', context)
 
+
 @login_required()
 def profile_list(request):
     postits = Postit.objects.all().order_by('-generated_on')
@@ -25,7 +26,6 @@ def postit_tempalte(request):
     if request.method == 'POST':
         author = request.user.pk
         heading = request.POST.get('heading_name')
-        # slug = heading
         body = request.POST.get('body_name')
         link = request.POST.get('url_name')
         image = request.POST.get('image_name')

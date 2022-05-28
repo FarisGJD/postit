@@ -8,8 +8,11 @@
     <meta name="description" content="POSTit is a social media internet/discussion forum used to connect people and ideas together">
     <meta name="keywords" content="social meda, internet forum, discussion forum">
     <meta name="authoer" content="Faris Dhoot">
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/cd2a226592.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
     <link rel="icon" href="static/images/favicon.ico" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>POST{it}</title>
 </head>
@@ -17,43 +20,45 @@
     <!-- Background Image -->
     <div id="background-image">
         <header>
+            <!-- Burger Mobile Navigation -->
+            <div class="burger-menu-icon"><i class="fa fa-bars"></i></div>
             <!-- Logo -->
             <a href="{% url 'home' %}">
                 <h1 id="logo">POST<span>{it}</span></h1>
             </a>
-    
             <!-- Navigation Bar -->
-            <nav id="navbar">
-                <ul>
-                    <li>
-                        <a href="{% url 'home' %}">HOME</a>
-                    </li> 
-                    <li>
-                        <a href="{% url 'postit' %}">POSTIT</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'profile' %}">PROFILE</a>
-                    </li>
+            <div class="burger-menu-container">
+                <nav id="navbar">
+                    <ul>
+                        <li>
+                            <a href="{% url 'home' %}">HOME</a>
+                        </li> 
+                        <li>
+                            <a href="{% url 'postit' %}">POSTIT</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'profile' %}">PROFILE</a>
+                        </li>
+                    </ul>
+                </nav>
     
-                </ul>
-            </nav>
-
-            <!-- Allauth -->
-            {% if user.is_authenticated %}
-            <div id="cta-button">
-                <li>
-                    <a href="{% url 'account_logout' %}">LOGOUT <i class="fa-solid fa-note-sticky"></i></a>
-                </li>
+                <!-- Allauth -->
+                {% if user.is_authenticated %}
+                <div id="cta-button">
+                    <li>
+                        <a href="{% url 'account_logout' %}">LOGOUT <i class="fa-solid fa-note-sticky"></i></a>
+                    </li>
+                </div>
+                {% else %}
+                <div id="cta-button">
+                    <li>
+                        <a href="{% url 'account_login' %}">LOGIN/SIGNUP <i class="fa-solid fa-note-sticky"></i></a>
+                    </li>
+                </div>
+                {% endif %}
             </div>
-            {% else %}
-            <div id="cta-button">
-                <li>
-                    <a href="{% url 'account_login' %}">LOGIN/SIGNUP <i class="fa-solid fa-note-sticky"></i></a>
-                </li>
-            </div>
-            {% endif %}
         </header>
-    
+
         <!-- Main Content -->
         {% block body %}
            <!-- Inserts Other Tempaltes Content -->
@@ -85,7 +90,8 @@
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/cd2a226592.js" crossorigin="anonymous"></script>
 
-  
+    <!-- Custom JavaScript-->
+    <script src="{% static 'js/script.js' %}"></script>
 
 
     
