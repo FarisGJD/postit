@@ -41,25 +41,6 @@ class Postit(models.Model):
         return self.votes.count()
 
 
-class Reply(models.Model):
-    '''User reply to commnets'''
-    postit = models.ForeignKey(
-        Postit, on_delete=models.CASCADE, related_name='reply_comments'
-        )
-    username = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='user_reply'
-        )
-    comments = models.TextField()
-    date_created = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        '''Organises commnets in asending order'''
-        ordering = ['date_created']
-
-    def _str_(self):
-        return f"Comment {self.comments} by {self.username}"
-
-
 class Comment(models.Model):
     '''User inital comments to post'''
     postit = models.ForeignKey(
@@ -71,8 +52,7 @@ class Comment(models.Model):
     comment = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    replies = models.ManyToManyField(Reply, blank=True)
-
+    
     class Meta:
         '''Organises commnets in asending order'''
         ordering = ['date_created']

@@ -1,5 +1,5 @@
 from django import forms 
-from .models import Postit
+from .models import Postit, Comment
 
 
 class PostitForm(forms.ModelForm):
@@ -11,3 +11,9 @@ class PostitForm(forms.ModelForm):
             'link',
             'image',
         ]
+
+
+class PostitComments(forms.ModelForm):
+    class Meta: 
+        model = Comment
+        fields = ('comment', )
