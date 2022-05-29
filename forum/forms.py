@@ -9,4 +9,5 @@ class PostitForm(forms.ModelForm):
             'heading',
             'body',
             'link',
+            'image',
         ]
