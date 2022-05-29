@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Postit
 from django.contrib.auth.decorators import login_required
 from .forms import PostitForm
-from django.views import generic, View 
+from django.views import View
 
 
 def postit_list(request):

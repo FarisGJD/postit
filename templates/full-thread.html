@@ -10,47 +10,48 @@
         <hr>
     </div>
 
-    <div class="thread-content-container">
-        <div class="thread thread1">
-            <div class='thread-pin'></div>
-            <div class="thread-meta-container">
-                <div  class="thread-meta-content">
+    <div class="full-thread-container">
+        <div class="full-thread">
+            <div class="full-thread-meta-container">
+                <div  class="full-thread-meta-content">
                     <p>{{ postit.author }}</p>
                 </div>
-                <div class="thread-meta-content">
+                <div class="full-thread-meta-content">
                     <p>{{ postit.generated_on }}</p>
                 </div>
-                <div class="thread-meta-content">
+                <div class="full-thread-meta-content">
                     <p>{{ postit.votes }}</p>
                 </div>
 
                 {% if postit.thread_starter %}
-                <div class="thread-meta-content">
+                <div class="full-thread-meta-content">
                     <p>Thread Starter</p>
                 </div>
                 {% endif %}
             </div>
 
-            <a href="#">
-                <div class="thread-body-container thread-heading">
+            <div class="full-thread-body-container">
+                <div class="full-thread-heading">
                     <h3>{{ postit.heading }}</h3>
                 </div>
-            </a>
+
+                <div class="full-thread-content">
+                    <p>{{ postit.body }}</p>
+                </div>
 
             {% if postit.link %}
-            <div class="thread-body-container thread-link">
+            <div class="full-thread-link">
                 <a href="{{ postit.link }}" rel="noopener" target="_blank" aria-label="Explore thread content link (opens in a new tab)"> {{ postit.link }}</a>
             </div>
             {% endif %}
-            <div class="thread-body-container thread-content">
-                <p>{{ postit.body }}</p>
-            </div>
+          
             
             {% if postit.image %}
-            <div class="thread-body-container thread-image">
+            <div class="full-thread-image">
                 <img src="{{ postit.image }}">
             </div>
             {% endif %}
+            </div>
         </div>
     </div>    
 </div>
