@@ -27,9 +27,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = False
 
-DEBUG = 'DEVELOPMENT' in os.environ
+X_FRAME_OPTIONS = "SAMEORIGIN"
+
+# DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['postit-fd.herokuapp.com', 'localhost']
 
