@@ -18,7 +18,9 @@ def create_postit(request):
     if request.method == 'POST':
         form = PostitForm(request.POST)
         if form.is_valid():
-            form.save()
+            post = form.save()
+            post.author = request.user
+            post.save()
         return redirect('home')
     form = PostitForm()
     context = {
@@ -70,7 +72,7 @@ def delete_postit(request, postit_id):
 
 @login_required()
 def profile_list(request):
-    postits = Postit.objects.all().order_by('-generated_on')
+    postits = Postit.objects.filter(author=request.user).order_by('-generated_on')
     context = {
         'postits': postits,
     }

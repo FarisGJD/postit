@@ -12,7 +12,7 @@ class Postit(models.Model):
     heading = models.CharField(max_length=300, unique=True, blank=True)
     slug = models.SlugField(max_length=300, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="forum_posts"
+        User, on_delete=models.CASCADE, related_name="forum_posts", null=True
         )
     generated_on = models.DateTimeField(auto_now_add=True)
     body = models.TextField()

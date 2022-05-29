@@ -34,9 +34,11 @@
                 </div>
             </a>
 
+            {% if postit.link %}
             <div class="thread-body-container thread-link">
                 <a href="{{ postit.link }}" rel="noopener" target="_blank" aria-label="Explore thread content link (opens in a new tab)"> {{ postit.link }}</a>
             </div>
+            {% endif %}
             <div class="thread-body-container thread-content">
                 <p>{{ postit.body }}</p>
             </div>

@@ -435,7 +435,7 @@ textarea::placeholder {
     height: 250px;
     width: 250px; 
     border-radius: 50%;
-    background: url("../images/0_0fClPmIScV5pTLoE.jpeg") center center;
+    background-color: #ffffff;
     background-size: cover;
 }
 
@@ -501,8 +501,6 @@ textarea::placeholder {
     margin-left: 120px;
     box-shadow: 0 2px #000000;
 }
-
-
 
 /* Allauth - Login, Signup & Logout */ 
 
@@ -635,6 +633,7 @@ textarea::placeholder {
     background-color: red;
 }
 
+
 #delete-defensive-container {
     width: 350px;
     height: 300px;
@@ -683,6 +682,10 @@ textarea::placeholder {
 #delete-defensive-container.active {
     display: block;
 }
+
+/* #delete-defensive-container.remove {
+    display: none; 
+} */
 
 .fa-x {
     font-size: 2rem;
