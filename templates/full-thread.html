@@ -2,6 +2,57 @@
 
 {% block body %}
 
+<div id="trending-page-container">
+    <div class="postit-heading-container">
+        <div id="postit-heading">
+            <h2>Full Post</h2>
+        </div>
+        <hr>
+    </div>
 
+    <div class="thread-content-container">
+        <div class="thread thread1">
+            <div class='thread-pin'></div>
+            <div class="thread-meta-container">
+                <div  class="thread-meta-content">
+                    <p>{{ postit.author }}</p>
+                </div>
+                <div class="thread-meta-content">
+                    <p>{{ postit.generated_on }}</p>
+                </div>
+                <div class="thread-meta-content">
+                    <p>{{ postit.votes }}</p>
+                </div>
+
+                {% if postit.thread_starter %}
+                <div class="thread-meta-content">
+                    <p>Thread Starter</p>
+                </div>
+                {% endif %}
+            </div>
+
+            <a href="#">
+                <div class="thread-body-container thread-heading">
+                    <h3>{{ postit.heading }}</h3>
+                </div>
+            </a>
+
+            {% if postit.link %}
+            <div class="thread-body-container thread-link">
+                <a href="{{ postit.link }}" rel="noopener" target="_blank" aria-label="Explore thread content link (opens in a new tab)"> {{ postit.link }}</a>
+            </div>
+            {% endif %}
+            <div class="thread-body-container thread-content">
+                <p>{{ postit.body }}</p>
+            </div>
+            
+            {% if postit.image %}
+            <div class="thread-body-container thread-image">
+                <img src="{{ postit.image }}">
+            </div>
+            {% endif %}
+        </div>
+    </div>    
+</div>
 
 {% endblock body %}

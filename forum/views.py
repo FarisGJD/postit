@@ -2,15 +2,38 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Postit
 from django.contrib.auth.decorators import login_required
 from .forms import PostitForm
+from django.views import generic, View 
 
 
 def postit_list(request):
     postits = Postit.objects.all().order_by('-generated_on')
     context = {
-        'postits': postits
+        'postits': postits,
     }
 
     return render(request, 'index.html', context)
+
+
+class FullThread(View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Postit.objects.all()
+        postit = get_object_or_404(queryset, slug=slug)
+        comments = postit.comments.filter(approved=True).order_by(
+            'date_created')
+        votes = False
+        if postit.votes.filter(id=self.request.user.id).exists():
+            votes = True
+        return render(
+            request, 
+            "full-thread.html", 
+            {
+                "postit": postit,
+                "comments": comments,
+                "votes": votes,
+            }
+        )
+
 
 
 @login_required()

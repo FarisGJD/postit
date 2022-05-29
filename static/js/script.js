@@ -6,6 +6,6 @@ defensiveButton.onclick = function () {
     defensiveContainer.classList.toggle("active")
 }; 
 
-window.onclick = function () {
-    defensiveContainer.classList.toggle("remove")
-}
+// window.onclick = function () {
+//     defensiveContainer.classList.toggle("remove")
+// }

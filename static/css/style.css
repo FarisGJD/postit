@@ -303,6 +303,12 @@ footer a {
 .thread-image {
     width: 95%;
     height: 100px;
+    background-color: #1ba8b1;
+}
+
+.thread-image img {
+    height: 200px; 
+    width: 200px;
 }
 
 .thread-pin {
@@ -392,10 +398,6 @@ textarea::placeholder {
     background-color: #ff0079;
 }
 
-#form-category {
-    background-color: #ff7455;
-    width: 25%;
-}
 
 #form-submit {
     background-color: #dcff46;

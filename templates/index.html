@@ -23,12 +23,15 @@
                 <div class="thread-meta-content">
                     <p>{{ postit.votes }}</p>
                 </div>
+
+                {% if postit.thread_starter %}
                 <div class="thread-meta-content">
-                    <p>{{ postit.thread_starter }}</p>
+                    <p>Thread Starter</p>
                 </div>
+                {% endif %}
             </div>
 
-            <a href="#">
+            <a href="{% url 'full_thread' postit.slug %}">
                 <div class="thread-body-container thread-heading">
                     <h3>{{ postit.heading }}</h3>
                 </div>
@@ -43,9 +46,11 @@
                 <p>{{ postit.body }}</p>
             </div>
             
+            {% if postit.image %}
             <div class="thread-body-container thread-image">
                 <img src="{{ postit.image.url }}">
             </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>    
