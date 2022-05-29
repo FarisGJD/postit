@@ -72,7 +72,7 @@ def delete_postit(request, postit_id):
 def profile_list(request):
     postits = Postit.objects.all().order_by('-generated_on')
     context = {
-        'postits': postits
+        'postits': postits,
     }
     return render(request, 'profile.html', context)
 

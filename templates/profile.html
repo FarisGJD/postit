@@ -15,30 +15,36 @@
 
 <div class="thread-content-container user-posts-container">
     {% for postit in postits %}
-    <div class="thread thread1 user-posts">
-        <div class='profile-pin'></div>
-        <a href="#">
-            <div class="thread-body-container profile-thread-heading">
-                <h3>{{ postit.heading }}</h3>
+     <div class="thread thread1 user-posts">
+            <div class='profile-pin'></div>
+            <a href="#">
+                <div class="thread-body-container profile-thread-heading">
+                    <h3>{{ postit.heading }}</h3>
+                </div>
+            </a>
+    
+            <div class="thread-body-container profile-thread-content">
+                <p>{{ postit.body }}</p>
             </div>
-        </a>
-
-        <div class="thread-body-container profile-thread-content">
-            <p>{{ postit.body }}</p>
+    
+            <div class="thread-body-container profile-thread-image">
+                <img src="{{ postit.image.url }}">
+            </div> 
+            <div class="edit-delete-button">
+                <a href="/edit/{{ postit.id }}">
+                    <button>EDIT</button>
+                </a>
+                    <button class="defensive-button">DELETE</button>
+            </div>
         </div>
-
-        <div class="thread-body-container profile-thread-image">
-            <img src="{{ postit.image.url }}">
-        </div> 
-        <div class="edit-delete-button">
-            <a href="/edit/{{ postit.id }}">
-                <button>EDIT</button>
-            </a>
-            <a href="/delete/{{ postit.id }}">
-                <button>DELETE</button>
-            </a>
+        <div class="edit-delete-button" id="delete-defensive-container">
+            <div class="delete-defensive">
+                <p>Are you sure you want to delete this post?</p>
+                <a class="remove-defensive" href="/delete/{{ postit.id }}">
+                    <button>DELETE</button>
+                </a>
+            </div>
         </div>
-    </div>
     {% endfor %}
 </div>
 

@@ -1,4 +1,4 @@
-from django import forms
+from django import forms 
 from .models import Postit
 
 
@@ -11,4 +11,3 @@ class PostitForm(forms.ModelForm):
             'body',
             'link',
         ]
-
