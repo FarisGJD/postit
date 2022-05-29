@@ -2,11 +2,7 @@
 
 {% block body %}
 
-<div class="profile-container"> 
-    <div class="profile-image-container">
-        <div class="user-image">
-        </div>
-    </div>
+<div class="profile-container">
     <div class="profile-info-container">
         <h2> {{ user.get_username }}</h2>
     </div>
@@ -26,10 +22,7 @@
             <div class="thread-body-container profile-thread-content">
                 <p>{{ postit.body }}</p>
             </div>
-    
-            <div class="thread-body-container profile-thread-image">
-                <img src="{{ postit.image.url }}">
-            </div> 
+
             <div class="edit-delete-button">
                 <a href="/edit/{{ postit.id }}">
                     <button>EDIT</button>

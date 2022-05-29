@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Postit
 from django.contrib.auth.decorators import login_required
-from .forms import PostitForm
+from .forms import PostitForm, PostitComments
 from django.views import View
 
 
@@ -21,19 +21,46 @@ class FullThread(View):
         postit = get_object_or_404(queryset, slug=slug)
         comments = postit.comments.filter(approved=True).order_by(
             'date_created')
-        votes = False
-        if postit.votes.filter(id=self.request.user.id).exists():
-            votes = True
         return render(
             request, 
             "full-thread.html", 
             {
                 "postit": postit,
                 "comments": comments,
-                "votes": votes,
-            }
+                "commented": False,
+                "postit_comments": PostitComments()
+            },
         )
 
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Postit.objects.all()
+        postit = get_object_or_404(queryset, slug=slug)
+        comments = postit.comments.filter(approved=True).order_by(
+            'date_created')
+
+        postit_comments = PostitComments(data=request.POST)
+
+        if postit_comments.is_valid():
+            postit_comments.instance.email = request.user.email
+            postit_comments.instance.name = request.user.username
+            comment = postit_comments.save(commit=False)
+            comment.postit = postit
+            comment.username = request.user
+            comment.save()
+            
+        else:
+            postit_comments = PostitComments()
+
+        return render(
+            request,
+            "full-thread.html",
+            {
+                "postit": postit,
+                "comments": comments,
+                "commented": True,
+                "postit_comments": PostitComments()
+            },
+        )
 
 
 @login_required()
@@ -50,25 +77,6 @@ def create_postit(request):
         'form': form,
     }
     return render(request, 'create-postit.html', context)
-
-
-# @login_required()
-# def create_postit(request):
-#     if request.method == 'POST':
-#         author = request.user.pk
-#         heading = request.POST.get('heading_name')
-#         body = request.POST.get('body_name')
-#         link = request.POST.get('url_name')
-#         image = request.POST.get('image_name')
-#         Postit.objects.create(
-#             author_id=author,
-#             heading=heading,
-#             body=body,
-#             link=link,
-#             image=image,
-#             )
-#         return redirect('home')
-#     return render(request, 'create-postit.html')
 
 
 @login_required()

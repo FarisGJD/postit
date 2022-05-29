@@ -2,7 +2,6 @@
 
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
 from django.utils.text import slugify
 
 
@@ -19,10 +18,6 @@ class Postit(models.Model):
     generated_on = models.DateTimeField(auto_now_add=True)
     body = models.TextField()
     link = models.URLField(max_length=200, null=True, blank=True)
-    image = CloudinaryField(
-        'image', default='palceholder', blank=True, null=True
-        )
-    votes = models.ManyToManyField(User, related_name='post_votes', blank=True)
 
     class Meta:
         '''Orders Posts based on date & time generated'''
@@ -36,11 +31,7 @@ class Postit(models.Model):
     def __str__(self):
         return str(self.heading)
 
-    def upvote_count(self):
-        '''Returns number of likes'''
-        return self.votes.count()
-
-
+        
 class Comment(models.Model):
     '''User inital comments to post'''
     postit = models.ForeignKey(

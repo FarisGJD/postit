@@ -19,10 +19,6 @@
                 <div class="full-thread-meta-content">
                     <p>{{ postit.generated_on }}</p>
                 </div>
-                <div class="full-thread-meta-content">
-                    <p>{{ postit.votes }}</p>
-                </div>
-
                 {% if postit.thread_starter %}
                 <div class="full-thread-meta-content">
                     <p>Thread Starter</p>
@@ -44,16 +40,40 @@
                 <a href="{{ postit.link }}" rel="noopener" target="_blank" aria-label="Explore thread content link (opens in a new tab)"> {{ postit.link }}</a>
             </div>
             {% endif %}
-          
-            
-            {% if postit.image %}
-            <div class="full-thread-image">
-                <img src="{{ postit.image }}">
-            </div>
-            {% endif %}
-            </div>
         </div>
-    </div>    
+    </div>
 </div>
+
+ {% if commented %}
+    <div> Please wait for your comment to be approved</div>
+    {% else %}
+
+    {% if user.is_authenticated %}
+    <div>
+        {% for comment in comments %}
+        <h3>COMMENT:</h3>
+        
+        <div>
+            {{ comment.username }}
+            {{ comment.created_on }}
+        </div>
+
+        <div>
+            {{ comment.comment }}
+        </div>
+
+        {% endfor %}
+
+    </div>
+    
+    <div class="comments-container">
+        <form method="post">
+            {{ postit_comments }}
+            {% csrf_token %}
+            <button type="submit">POST</button>
+        </form>
+        {% endif %}
+        {% endif %}
+    </div>
 
 {% endblock body %}

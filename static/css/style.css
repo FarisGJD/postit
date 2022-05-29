@@ -341,7 +341,7 @@ footer a {
 }
 
 .full-thread-body-container {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .full-thread-heading {
@@ -373,6 +373,17 @@ footer a {
     background-color: #000000;
 }
 
+
+/* Full Thread Comments */
+
+.comments-container {
+    width: 50%;
+    height: 50px;
+    height: 600px;
+    margin-bottom: 50px;
+    margin-right: 40px;
+    float: right;
+}
 
 
 /* Postit Page Header */

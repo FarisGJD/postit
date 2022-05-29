@@ -20,9 +20,6 @@
                 <div class="thread-meta-content">
                     <p>{{ postit.generated_on }}</p>
                 </div>
-                <div class="thread-meta-content">
-                    <p>{{ postit.votes }}</p>
-                </div>
 
                 {% if postit.thread_starter %}
                 <div class="thread-meta-content">
@@ -45,12 +42,6 @@
             <div class="thread-body-container thread-content">
                 <p>{{ postit.body }}</p>
             </div>
-            
-            {% if postit.image %}
-            <div class="thread-body-container thread-image">
-                <img src="{{ postit.image.url }}">
-            </div>
-            {% endif %}
         </div>
         {% endfor %}
     </div>    
