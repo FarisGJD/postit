@@ -10,8 +10,9 @@
         <hr>
     </div>
 
-    <div class="full-thread-container">
-        <div class="full-thread">
+    <div class="full-thread-content-container">
+        <div class="full-thread thread1">
+            <div class='full-thread-pin'></div>
             <div class="full-thread-meta-container">
                 <div  class="full-thread-meta-content">
                     <p>{{ postit.author }}</p>
@@ -26,47 +27,46 @@
                 {% endif %}
             </div>
 
-            <div class="full-thread-body-container">
+            <div class="full-thread-body-container full-thread-heading">
                 <div class="full-thread-heading">
                     <h3>{{ postit.heading }}</h3>
                 </div>
 
-                <div class="full-thread-content">
+                <div class="full-thread-body-container full-thread-content">
                     <p>{{ postit.body }}</p>
                 </div>
 
             {% if postit.link %}
-            <div class="full-thread-link">
+            <div class="full-thread-body-container full-thread-link">
                 <a href="{{ postit.link }}" rel="noopener" target="_blank" aria-label="Explore thread content link (opens in a new tab)"> {{ postit.link }}</a>
             </div>
             {% endif %}
         </div>
     </div>
-</div>
-
- {% if commented %}
-    <div> Please wait for your comment to be approved</div>
-    {% else %}
-
-    {% if user.is_authenticated %}
-    <div>
+    
+<div class="comments-container">
+    <div class="comments">
+        <h3>USER COMMENTS:</h3>
+        <hr>
         {% for comment in comments %}
-        <h3>COMMENT:</h3>
-        
-        <div>
+        <div class="user-comments-meta">
             {{ comment.username }}
-            {{ comment.created_on }}
+            {{ comment.date_created }}
         </div>
-
-        <div>
+        <div class="user-comments">
             {{ comment.comment }}
         </div>
-
+        <hr>
         {% endfor %}
-
+        {% if commented %}
+        <div class="aproval-status"><h3>Please wait for your comment to be approved</h3></div>
+        {% else %}
     </div>
-    
-    <div class="comments-container">
+
+    {% if user.is_authenticated %}
+    <div class="comment-box-container">
+        <h3>LEAVE A COMMENT:</h3>
+        <hr>
         <form method="post">
             {{ postit_comments }}
             {% csrf_token %}
@@ -75,5 +75,6 @@
         {% endif %}
         {% endif %}
     </div>
+</div>
 
 {% endblock body %}

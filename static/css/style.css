@@ -288,24 +288,8 @@ footer a {
     font-size: 1.2rem;
 }
 
-.thread-link:hover {
-    text-shadow: 2px 2px #ffffff;
-    transform: translateY(5px);
-}
-
 .thread-content {
     font-size: 1.2rem;
-}
-
-.thread-image {
-    width: 95%;
-    height: 100px;
-    background-color: #1ba8b1;
-}
-
-.thread-image img {
-    height: 200px; 
-    width: 200px;
 }
 
 .thread-pin {
@@ -319,49 +303,53 @@ footer a {
 
 /* Full Thread Page */
 
-.full-thread-container {
-    width: 100%; 
+.full-thread-content-container {
+    width: 94%; 
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: auto;
 }
 
 .full-thread {
-    width: 90%;
-    height: 90%;
-}
-
-.full-thread-meta-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 2rem;
-    text-shadow: 2px 2px #000000;
-}
-
-.full-thread-body-container {
-    /* margin-bottom: 100px; */
-}
-
-.full-thread-heading {
-    font-size: 6rem;
-    text-shadow: 2px 2px #ffffff;
+    width: 70%;
+    height: 100%;
+    margin: 40px 40px 120px 40px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    border: 1px solid rgba(0,0,0,.25);
     color: #000000;
 }
 
-.full-thread-heading h3 {
-    bottom: 0; 
+.full-thread-meta-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+    font-size: 2rem;
 }
 
-.full-thread-content {
-    font-size: 4rem;
-    text-shadow: 2px 2px #000000;
+.full-thread-body-container {
+    margin: 10px;
+}
+
+.full-thread-heading{
+    font-size: 6rem;
+    font-family: 'Cabin Sketch', cursive;
     text-align: center;
 }
 
+.thread-heading:hover {
+    text-shadow: 2px 2px #ffffff;
+    transform: translateX(5px);
+}
+
 .full-thread-link {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .full-thread-link:hover {
@@ -369,20 +357,76 @@ footer a {
     transform: translateY(5px);
 }
 
-.full-thread-iamge {
-    background-color: #000000;
+.full-thread-content {
+    font-size: 2rem;
 }
 
+.full-thread-pin {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: auto;
+    box-shadow: 0 2px #000000;
+}
 
 /* Full Thread Comments */
 
 .comments-container {
-    width: 50%;
-    height: 50px;
-    height: 600px;
-    margin-bottom: 50px;
-    margin-right: 40px;
-    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 200px;
+}
+
+.comments {
+    text-shadow: 2px 2px #000000;
+}
+
+.comments h3 {
+    font-size: 3.5rem;
+}
+
+.comments hr {
+    width: 100%;
+}
+
+.user-comments-meta {
+    font-size: 1.5rem;
+}
+
+.user-comments {
+    font-size: 3rem;
+}
+
+.aproval-status {
+    font-size: 1.8rem;
+}
+
+.comment-box-container {
+    width: 600px;
+    text-shadow: 2px 2px #000000;
+}
+
+.comment-box-container h3 {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.comment-box-container form {
+    font-size: 2.5rem;
+}
+
+.comment-box-container button {
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 2rem;
+    text-shadow: 2px 2px #000000;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px #000000;
 }
 
 
