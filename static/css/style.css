@@ -175,6 +175,7 @@ footer a {
 #latest-page-container {
     width: 100%;
     margin: auto;
+    background-color: #1ba8b1;
 }
 
 
@@ -515,57 +516,6 @@ form {
     box-shadow: 0 2px #000000;
 }
 
-/* Defensive Delete Styles */ 
-
-#delete-defensive-container {
-    width: 350px;
-    height: 300px;
-    background-color: #ffffff;
-    position: absolute;
-    border-radius: 5px;
-    border: 31px solid transparent;
-    border-image-source: url("https://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
-    border-image-slice: 31 29;
-    border-image-width: 31px 29px;
-    background-image: url("https://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg");
-    margin-top: 40px;
-    display: none;
-    z-index: 1;
-}
-
-.delete-defensive {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-}
-
-.delete-defensive p {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px #000000;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.delete-defensive button {
-    color: #ffffff;
-    text-shadow: 2px 2px #000000;
-    font-size: 2.5rem;
-}
-
-.delete-defensive button:hover {
-    color: #000000;
-    text-shadow: 2px 2px #ffffff;
-}
-
-.delete-defensive a {
-    margin: auto;
-    left: 0; 
-}
-
-#delete-defensive-container.active {
-    display: block;
-}
-
 /* Allauth - Login, Signup & Logout */ 
 
 .allauth-heading-container {
@@ -813,8 +763,7 @@ form {
     }
 
    .fa-bars{
-        margin: 20px;
-        font-size: 15px;
+        font-size: 2rem;
     }
 
     #postit-form-container {
@@ -894,6 +843,10 @@ form {
 
     .allauth-form-container {
         width: 250px;
+    }
+
+    #latest-page-container {
+        margin-top: 120px;
     }
 }
 
