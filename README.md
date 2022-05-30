@@ -79,21 +79,52 @@ To give the feel of a cork board a high resolution image of one was used as the 
 ***
 # Features
 
-**Header** 
+**Base.html** 
+
+***Header*** 
 
 Consists of a logo, navigation menu and call to action all of which allow the user to get a feel of the site, access its different pages and most importantly create an account. 
 
-**Footer**
+***Footer***
 
 Gives the user opportunity to check out Post{it} social media accounts as well as contact information. 
 
+**index.html** 
+
+This is the home page where the user can read the latest posts. It is important as it sets the stage for the next feature which is one of the most important. 
+
+**full-thread.html**
+
+Allows the user to get a detailed view of the post they are interested in as well as creating a dialogue between individuals which is the main goal behind Post{it}
 
 
+**create-postit.html** 
 
+Another one of the most important parts of the site which allows users to engage with the site itself thus setting them up for communication between other users. 
 
+**profile.html**
 
+Allows the user to view and manage the posts they have created which gives them 50% of the CRUD functionality 
 
+***update.html***
 
+Redirects the user to a prepopulated form in which they can edit the post they have chosen to update. 
+
+***delete***
+
+Although not a template in its own right, it gives the user the ability to easily delete its respective post. 
+
+**allauth**
+
+Another important features which allows the user to create and manage their account with Post{it} which in turns gives them more or less access to the overall site. 
+
+**Features To Implement**
+
+-	Likes 
+-	Image, video & audio uploads 
+-	Organise posts through user generated categories such as NSFV, MEME, GIFS etc…
+-	Search bar to sift through posts 
+-	Increased functionality in the profile page 
 
 ***
 # Technologies Used 
@@ -126,3 +157,85 @@ Gives the user opportunity to check out Post{it} social media accounts as well a
 - W3C Validators 
 - W3C Jigsaw 
 - PEP8 
+
+***
+# Search Engine Optimization
+SEO techniques wwere used to improve the quality and quanitity of traffic towards POST{it} such as: 
+- Keywords and Meta Description tags within the base.html temaplte creating better relationships between the site pages and serach engies.
+- Crawlable Links. 
+
+***
+# Bugs & Issues
+
+Using an MVT framework coupled with an Agile methodology proved to be extremely successful in the development of the site since few  bugs & issues were encountered. This coupled with Django’s in-built debugger made for a rapid and enjoyable creations process. If any issues were to be brought up it would be a lack of experience with templating languages. 
+
+***
+# Testing 
+
+**HTML Validation** 
+
+W3C Markup Validation Service was implementd to validate the HTML/tempaltes of the websites. The only errors that came about were due to tempalte variables being inlcuded in the HTML and the use of a base.html import which meant all but one of the pages had head tags. 
+
+**CSS Validation** 
+
+W3C Jigsaw was used to validate the CSS and returned no errors. 
+
+**JavaScript Validation** 
+
+JSHint Analysis Tool was used for the JavaScript and not significant issues were found except for missing semi colons and the use of ES6 arrow function. 
+
+***
+# Deployment
+
+
+The app was deployed on Heroku by following these steps: 
+
+**Heroku**
+
+1.	Create Heroku app 
+-	Head to the Heroku Website
+-	Create an account by entering the specified details such as email address and password 
+-	Activate account through email authentication 
+-	Head back to Heroku and click new button which will reveal a drop down menu, select new app from there 
+-	Enter a unique app name and select the region closest to you 
+-	Click on create app 
+2.	Creating The Database
+-	In the dashboard head over to the resource tab. 
+-	Scroll down and click on Add-Ons, searching for and selecting the Heroku Postgres database in this case
+3.	Setting Environment Variables
+-	Heading to the settings tab and scroll down to Reveal Config Vars section where you will input your environment variables 
+4.	Add Heroku Hostname to Allowed_Hosts  in your workspace settings.py file 
+5.	Set up Cloudinary for media and static files storage 
+-	Create cloudinary account and copy you’re your API  environment variable and paste it into the Config Vars in Heroku with the key type of CLOUDINARY_URL. 
+6.	Create Procfile in top level directory
+7.	Heroku Deployment 
+-	Click on deply tab on Heroku 
+-	For deployment method click GitHub and connect your GitHub account. 
+-	In the search box search for your repository name and then link the two
+-	Optional you can either choose manual deployment from Heroku or automatic which will deploy based on your workspace git pushes
+8.	Final Deployment 
+-	When you have completed the development process in the settings.py file change DEBUG to False. 
+
+**Forking The Repositroy** 
+-	Navigate to the repository on GitHub
+-	 Click on the fork button in the upper right-hand corner
+
+**Cloning The Repository** 
+-	Navigate to the repository on GitHub 
+-	Click the code dropdown menu 
+-	Selecting your cloning preference such as HTTPS, SSH, or GitHub CLI and then click copy to copy the URL to your clipboard
+-	Open Git Bash 
+-	Change the currently working directory to one which you want the cloned one. 
+-	Type git clone and paste the URL from the clipboard 
+-	Enter to create your clone.
+
+***
+# Credits
+- CI DBMS walkthrough Project 
+- CI Hello Django walktrhough Project 
+- CI I Think Before I Blog Walkthrough Project 
+
+# Notes 
+
+Unfortunately, my GitPod workspace which had 90% of my work completed was corrupted meaning I lost a huge amount of work as you will be able to tell from my repo commits and pushes. I have had to restart all over again and complete everything within a week. 
+

@@ -1,6 +1,6 @@
 const hamburger = document.getElementById('hamburger');
 const navUl = document.getElementById('navbar');
-const ctaButton = document.getElementById('cta-button')
+const ctaButton = document.getElementById('cta-button'); 
 
 
 hamburger.addEventListener('click', () => {
