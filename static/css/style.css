@@ -15,6 +15,7 @@ html{
 body {
     margin: 0; 
     padding: 0;
+    font-family: 'Raleway', sans-serif;
     font-family: 'Cabin Sketch', cursive;
 }
 
@@ -40,7 +41,6 @@ ul {
 
 #logo {
     margin-left: 60px;
-    font-family: 'Raleway', sans-serif;
     font-size: 8rem;
     font-weight: 900;
     text-shadow: 0 5px #000000, 0 8px #000000; 
@@ -688,24 +688,14 @@ form {
     background-color: #1ba8b1;
 }
 
-.form-control {
-    background-color: red;
-}
-
 /* Media Queries */ 
 
-@media only screen and (max-width: 1300px) {
-
-}
-
 @media only screen and (max-width: 850px) {
+
     .full-thread {
         width: 58rem;
 
     }
-
-} 
-@media only screen and (max-width: 800px) {
 
     #navbar, #cta-button {
         display: none;
@@ -821,7 +811,6 @@ form {
     #navbar li {
         font-size: 1.8rem;
     }
-ç
 
    .fa-bars{
         margin: 20px;
