@@ -213,62 +213,6 @@ footer a {
     background-color: #feff9c; 
 }
 
-.thread2 {
-    transform: rotate(0.5deg);
-    -webkit-transform: rotate(0.5deg);
-    -moz-transform: rotate(0.5deg);
-    background-color: #ff65a3;
-}
-
-.thread3 {
-    transform: rotate(1.0deg);
-    -webkit-transform: rotate(1.0deg);
-    -moz-transform: rotate(1.0deg);
-    background-color: #7afcff;
-}
-
-.thread4 {
-    transform: rotate(-1.0deg);
-    -webkit-transform: rotate(-1.0deg);
-    -moz-transform: rotate(-1.0deg);
-    background-color: #ffa930;
-}
-
-.thread5 {
-    transform: rotate(-1.5deg);
-    -webkit-transform: rotate(-1.5deg);
-    -moz-transform: rotate(-1.5deg);
-    background-color: #74ed4b;
-}
-
-.thread6 {
-    transform: rotate(1.5deg);
-    -webkit-transform: rotate(1.5deg);
-    -moz-transform: rotate(1.5deg);
-    background-color: #ff7455;
-}
-
-.thread7 {
-    transform: rotate(2.0deg);
-    -webkit-transform: rotate(2.0deg);
-    -moz-transform: rotate(2.0deg);
-    background-color: #1ba8b1;
-}
-
-.thread8 {
-    transform: rotate(-2.0deg);
-    -webkit-transform: rotate(-2.0deg);
-    -moz-transform: rotate(-2.0deg);
-    background-color: #ff0079;
-}
-
-.thread9 {
-    transform: rotate(0.5deg);
-    -webkit-transform: rotate(0.5deg);
-    -moz-transform: rotate(0.5deg);
-    background-color: #dcff46;
-}
-
 .thread-meta-container{
     display: flex;
     flex-direction: row;
@@ -393,7 +337,7 @@ footer a {
 }
 
 .comments h3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .comments hr {
@@ -413,12 +357,12 @@ footer a {
 }
 
 .comment-box-container {
-    width: 600px;
+    width: 400px;
     text-shadow: 2px 2px #000000;
 }
 
 .comment-box-container h3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -665,8 +609,7 @@ form {
 }
 
 .allauth-form-container {
-    width:  40%;
-    height: 40%;
+    width: 500px;
     margin: auto;
     margin-top: 20px;
     border-radius: 5px;
@@ -679,20 +622,16 @@ form {
 
 .form-style {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: 3px 3px #000000;
     justify-content: center;
 }
 
 .form-style label {
     text-align: center;
-}
-
-.form-style input {
-    width: 100%; 
 }
 
 .form-style button {
@@ -755,6 +694,10 @@ form {
 
 /* Media Queries */ 
 
+@media only screen and (max-width: 1300px) {
+
+}
+
 @media only screen and (max-width: 850px) {
     .full-thread {
         width: 58rem;
@@ -784,12 +727,47 @@ form {
     .burger {
         display: block;
     }
-    
+
+    .comments-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full-thread-pin {
+        height: 30px; 
+        width: 30px;
+    }
+
+    .full-thread-heading{
+        font-size: 5rem;
+    }
   
 }
 
 @media only screen and (max-width: 600px) {
-  
+    .full-thread {
+        width: 45rem;
+
+    }
+
+    .full-thread-meta-container {
+        font-size: 1.5rem;
+    }
+
+    .full-thread-heading{
+        font-size: 4rem;
+    }
+
+    .sign-out-button button {
+        font-size: 3rem;
+    }
+
+    .allauth-form-container {
+        width: 350px;
+        margin-top: 100px;
+    }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -804,6 +782,28 @@ form {
     .full-thread {
         width: 35rem;
     }
+
+    .full-thread-meta-container {
+        font-size: 1.2rem;
+    }
+
+    .full-thread-heading{
+        font-size: 3rem;
+    }
+
+    .comment-box-container {
+        width: 300px;
+    }
+
+    .thread {
+        width: 350px;
+        height: 350px;
+    }
+
+    .allauth-info {
+        width: 300px;
+    }
+    
 
 }
 
@@ -852,6 +852,60 @@ form {
         width: 25rem;
     }
 
+    .full-thread-content {
+        font-size: 1.5rem;
+    }
+
+    .full-thread-link {
+        font-size: 1.5rem;
+    }
+
+    .comment-box-container {
+        width: 200px;
+    }
+
+    .comments h3 {
+        font-size: 2rem;
+    }
+    
+    .user-comments-meta {
+        font-size: 1.2rem;
+    }
+    
+    .user-comments {
+        font-size: 2rem;
+    }
+    
+    .aproval-status {
+        font-size: 1.5rem;
+    }
+
+    .comment-box-container h3 {
+        font-size: 2rem;
+    }
+
+    .thread {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .thread-meta-container{
+
+        font-size: 0.8rem;
+    }
+
+    .thread-pin {
+        width: 10px; 
+        height: 10px;
+    }
+
+    .sign-out-button button {
+        font-size: 2rem;
+    }
+
+    .allauth-form-container {
+        width: 250px;
+    }
 }
 
 @media only screen and (max-width: 300px) {
@@ -864,3 +918,5 @@ form {
     }
 
 }
+
+
