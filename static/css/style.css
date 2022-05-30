@@ -61,6 +61,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
+    flex-wrap: wrap;
 }
 
 header li {
@@ -102,21 +103,23 @@ header li {
     transform: translateY(5px);
 }
 
-.burger-menu-icon {
-    font-size: 3rem;
-    text-shadow: 2px 4px #000000;
-    margin: 40px; 
-    display: none; 
-    cursor: pointer; 
-}
-
 /* Hamburger Navigation */ 
 
-.burger-menu-icon {
-    width: 50px; 
-    height: 50px;
-    background-color: #000000;
+.burger {
+    background-color: transparent;
+    border: 0; 
+    color: #ffffff; 
+    font-size: 30px; 
+    cursor: pointer;
+    text-shadow: 2px 2px #000000;
+    margin-right: 60px;
+    display: none;
 }
+
+.burger:focus {
+    outline: none; 
+}
+
 
 /* Footer */
 
@@ -127,9 +130,6 @@ footer {
     align-items: center;
     width: 100%;
     color: #000000;
-    bottom: 0; 
-    left: 0; 
-    position: fixed;
 }
 
 footer li {
@@ -322,7 +322,7 @@ footer a {
 }
 
 .full-thread {
-    width: 70%;
+    width: 80rem;
     height: 100%;
     margin: 40px 40px 120px 40px;
     overflow: hidden;
@@ -460,8 +460,7 @@ hr {
 }
 
 #postit-form-container {
-    width:  40%;
-    height: 40%;
+    width: 500px;
     margin: auto;
     margin-top: 20px;
     border-radius: 5px;
@@ -469,31 +468,15 @@ hr {
     border-image-source: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png");
     border-image-slice: 31 29;
     border-image-width: 31px 29px;
-    margin-bottom: 120px;
+    margin-bottom: 180px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: 95%;
     margin: auto;
-}
-
-input:focus::placeholder {
-    color: #000000; 
-}
-
-input::placeholder {
-    color: #ffffff;
-    transition: color 5 ease;
-    font-family: 'Courier New', Courier, monospace;
-    text-shadow: 1px 1px #000000;
-}
-
-textarea::placeholder {
-    color: #ffffff; 
-    font-family: 'Courier New', Courier, monospace;
-    text-shadow: 1px 1px #000000;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px #000000;
 }
 
 .input-general {
@@ -503,19 +486,6 @@ textarea::placeholder {
     margin: 15px 0 15px 0;
     box-shadow: 2px 4px #000000;
 }
-
-#form-heading {
-    background-color: #1ba8b1;
-}
-
-#form-content {
-    background-color: #74ed4b;
-}
-
-#form-url {
-    background-color: #ff0079;
-}
-
 
 #form-submit {
     background-color: #dcff46;
@@ -531,17 +501,6 @@ textarea::placeholder {
     transform: translateY(5px);
 }
 
-.content {
-    height: 205px;
-}
-
-.category-image-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
 /* Profile Page */ 
 
 .profile-container {
@@ -550,21 +509,11 @@ textarea::placeholder {
     justify-content: center;
 }
 
-.profile-image-container {
-    background-color: #1ba8b1;
-    height: 250px;
-    width: 250px; 
-    border-radius: 50%;
-    background-color: #ffffff;
-    background-size: cover;
-}
 
 .profile-info-container {
     font-size: 5rem;
     font-family: 'Londrina Sketch', cursive;
     height: 200px;
-    width: 20%;
-    margin-left: 20px;
     text-shadow: 0 5px #000000;
 }
 
@@ -806,6 +755,112 @@ textarea::placeholder {
 
 /* Media Queries */ 
 
+@media only screen and (max-width: 850px) {
+    .full-thread {
+        width: 58rem;
+
+    }
+
+} 
 @media only screen and (max-width: 800px) {
+
+    #navbar, #cta-button {
+        display: none;
+        width: 100%; 
+    }
+
+    #navbar.show {
+        display: flex;
+        justify-content: center;
+    }
+
+    #cta-button.show {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        margin: auto;
+    }
+
+    .burger {
+        display: block;
+    }
     
+  
+}
+
+@media only screen and (max-width: 600px) {
+  
+}
+
+@media only screen and (max-width: 500px) {
+    #postit-form-container {
+        width: 400px; 
+    }
+
+    #cta-button a {
+        font-size: 1.3rem;
+    }
+
+    .full-thread {
+        width: 35rem;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    #logo {
+        margin: 20px;
+        font-size: 5rem;
+
+    }
+
+    #logo span {
+        font-size: 3rem;
+    }
+
+    #navbar li {
+        font-size: 1.8rem;
+    }
+ç
+
+   .fa-bars{
+        margin: 20px;
+        font-size: 15px;
+    }
+
+    #postit-form-container {
+        width: 300px; 
+    }
+
+    #cta-button a {
+        font-size: 1.2rem;
+    }
+
+    #postit-heading {
+        font-size: 2.5rem;
+    }
+
+    .profile-info-container {
+        font-size: 3rem; 
+    }
+
+    #postit-heading {
+        font-size: 2rem;
+    }
+
+    .full-thread {
+        width: 25rem;
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+    #postit-form-container {
+        width: 250px; 
+    }
+
+    #cta-button a {
+        font-size: 1rem;
+    }
+
 }
