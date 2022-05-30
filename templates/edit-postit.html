@@ -1,38 +1,26 @@
-{% extends "base.html" %}
-
-{% block body %}
+{% extends "base.html" %} {% block body %}
 
 <div id="postit-page-container">
     <div class="postit-heading-container">
         <div id="postit-heading">
             <h2>Edit A Post</h2>
         </div>
-        <hr>
+        <hr />
     </div>
 
-  
     <section aria-label="create content form">
         <div id="postit-form-container">
             <div id="postit-form-contnet">
                 <form method="POST">
-                    {% csrf_token %}
-
-                    {{ form }}
-                    <!-- <input class="input-general" id="form-heading" type="text" name="heading_name" placeholder="Title" aria-label="create title" required>
-    
-                    <textarea class="input-general content" id="form-content"  name="body_name" type="text" placeholder="Content..." aria-label="create content"></textarea>
-
-                    <input class="input-general" id="form-url" type="url"  name="url_name" placeholder="Enter an https:// URL:" aria-label="insert url"> -->
+                    {% csrf_token %} {{ form }}
 
                     <div class="category-image-container">
-                        <!-- <input class="input-general" id="form-image " type="file"  name="image_name" placeholder="Image" aria-label="upload image"> -->
-                        <input class="input-general" id="form-submit" type="submit" value="EDIT POST" placeholder="EDIT POST" aria-label="post content">
-                    </div>                   
+                        <input class="input-general" id="form-submit" type="submit" value="EDIT POST" placeholder="EDIT POST" aria-label="post content" />
+                    </div>
                 </form>
             </div>
         </div>
     </section>
 </div>
-
 
 {% endblock body %}

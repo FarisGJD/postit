@@ -22,7 +22,7 @@ class Postit(models.Model):
     class Meta:
         '''Orders Posts based on date & time generated'''
         ordering = ['-generated_on']
-    
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.heading)
@@ -31,7 +31,7 @@ class Postit(models.Model):
     def __str__(self):
         return str(self.heading)
 
-        
+
 class Comment(models.Model):
     '''User inital comments to post'''
     postit = models.ForeignKey(
@@ -43,7 +43,7 @@ class Comment(models.Model):
     comment = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    
+
     class Meta:
         '''Organises commnets in asending order'''
         ordering = ['date_created']

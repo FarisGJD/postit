@@ -1,20 +1,18 @@
-{% extends "base.html" %}
-
-{% block body %}
+{% extends "base.html" %} {% block body %}
 <div id="latest-page-container">
     <div class="postit-heading-container">
         <div id="postit-heading">
             <h2>Latest Posts</h2>
         </div>
-        <hr>
+        <hr />
     </div>
 
     <div class="thread-content-container">
         {% for postit in postits %}
         <div class="thread thread1">
-            <div class='thread-pin'></div>
+            <div class="thread-pin"></div>
             <div class="thread-meta-container">
-                <div  class="thread-meta-content">
+                <div class="thread-meta-content">
                     <p>{{ postit.author }}</p>
                 </div>
                 <div class="thread-meta-content">
@@ -44,6 +42,6 @@
             </div>
         </div>
         {% endfor %}
-    </div>    
+    </div>
 </div>
 {% endblock body %}

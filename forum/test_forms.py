@@ -15,11 +15,11 @@ class TestPostitForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('body', form.errors.keys())
         self.assertEqual(form.errors['body'][0], 'This field is required.')
-            
+
     def test_link_field_is_not_required(self):
         form = PostitForm({'heading': 'Test Postit Form'})
         self.assertFalse(form.is_valid())
-    
+
     def test_postit_form_input_fields_are_in_metaclass(self):
         form = PostitForm()
         self.assertEqual(form.Meta.fields, ['heading', 'body', 'link'])

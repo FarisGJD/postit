@@ -1,20 +1,18 @@
-{% extends "base.html" %}
-
-{% block body %}
+{% extends "base.html" %} {% block body %}
 
 <div id="trending-page-container">
     <div class="postit-heading-container">
         <div id="postit-heading">
             <h2>Full Post</h2>
         </div>
-        <hr>
+        <hr />
     </div>
 
     <div class="full-thread-content-container">
         <div class="full-thread thread1">
-            <div class='full-thread-pin'></div>
+            <div class="full-thread-pin"></div>
             <div class="full-thread-meta-container">
-                <div  class="full-thread-meta-content">
+                <div class="full-thread-meta-content">
                     <p>{{ postit.author }}</p>
                 </div>
                 <div class="full-thread-meta-content">
@@ -36,45 +34,43 @@
                     <p>{{ postit.body }}</p>
                 </div>
 
-            {% if postit.link %}
-            <div class="full-thread-body-container full-thread-link">
-                <a href="{{ postit.link }}" rel="noopener" target="_blank" aria-label="Explore thread content link (opens in a new tab)"> {{ postit.link }}</a>
+                {% if postit.link %}
+                <div class="full-thread-body-container full-thread-link">
+                    <a href="{{ postit.link }}" rel="noopener" target="_blank" aria-label="Explore thread content link (opens in a new tab)"> {{ postit.link }}</a>
+                </div>
+                {% endif %}
             </div>
-            {% endif %}
         </div>
-    </div>
-    
-<div class="comments-container">
-    <div class="comments">
-        <h3>USER COMMENTS:</h3>
-        <hr>
-        {% for comment in comments %}
-        <div class="user-comments-meta">
-            {{ comment.username }}
-            {{ comment.date_created }}
-        </div>
-        <div class="user-comments">
-            {{ comment.comment }}
-        </div>
-        <hr>
-        {% endfor %}
-        {% if commented %}
-        <div class="aproval-status"><h3>Please wait for your comment to be approved</h3></div>
-        {% else %}
-    </div>
 
-    {% if user.is_authenticated %}
-    <div class="comment-box-container">
-        <h3>LEAVE A COMMENT:</h3>
-        <hr>
-        <form method="post">
-            {{ postit_comments }}
-            {% csrf_token %}
-            <button type="submit">POST</button>
-        </form>
-        {% endif %}
-        {% endif %}
+        <div class="comments-container">
+            <div class="comments">
+                <h3>USER COMMENTS:</h3>
+                <hr />
+                {% for comment in comments %}
+                <div class="user-comments-meta">
+                    {{ comment.username }} {{ comment.date_created }}
+                </div>
+                <div class="user-comments">
+                    {{ comment.comment }}
+                </div>
+                <hr />
+                {% endfor %} {% if commented %}
+                <div class="aproval-status"><h3>Please wait for your comment to be approved</h3></div>
+                {% else %}
+            </div>
+
+            {% if user.is_authenticated %}
+            <div class="comment-box-container">
+                <h3>LEAVE A COMMENT:</h3>
+                <hr />
+                <form method="post">
+                    {{ postit_comments }} {% csrf_token %}
+                    <button type="submit">POST</button>
+                </form>
+                {% endif %} {% endif %}
+            </div>
+        </div>
+
+        {% endblock body %}
     </div>
 </div>
-
-{% endblock body %}

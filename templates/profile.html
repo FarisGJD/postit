@@ -1,37 +1,35 @@
-{% extends "base.html" %}
-
-{% block body %}
+{% extends "base.html" %} {% block body %}
 
 <div class="profile-container">
     <div class="profile-info-container">
-        <h2> {{ user.get_username }}</h2>
+        <h2>{{ user.get_username }}</h2>
     </div>
 </div>
-<hr>
+<hr />
 
 <div class="thread-content-container user-posts-container">
     {% for postit in postits %}
-     <div class="thread thread1 user-posts">
-            <div class='profile-pin'></div>
-            <a href="#">
-                <div class="thread-body-container profile-thread-heading">
-                    <h3>{{ postit.heading }}</h3>
-                </div>
-            </a>
-    
-            <div class="thread-body-container profile-thread-content">
-                <p>{{ postit.body }}</p>
+    <div class="thread thread1 user-posts">
+        <div class="profile-pin"></div>
+        <a href="#">
+            <div class="thread-body-container profile-thread-heading">
+                <h3>{{ postit.heading }}</h3>
             </div>
+        </a>
 
-            <div class="edit-delete-button">
-                <a href="/edit/{{ postit.id }}">
-                    <button>EDIT</button>
-                </a>
-                <a class="remove-defensive" href="/delete/{{ postit.id }}">
-                    <button>DELETE</button>
-                </a>
-            </div>
+        <div class="thread-body-container profile-thread-content">
+            <p>{{ postit.body }}</p>
         </div>
+
+        <div class="edit-delete-button">
+            <a href="/edit/{{ postit.id }}">
+                <button>EDIT</button>
+            </a>
+            <a class="remove-defensive" href="/delete/{{ postit.id }}">
+                <button>DELETE</button>
+            </a>
+        </div>
+    </div>
     {% endfor %}
 </div>
 

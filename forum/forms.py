@@ -1,4 +1,4 @@
-from django import forms 
+from django import forms
 from .models import Postit, Comment
 
 
@@ -13,6 +13,6 @@ class PostitForm(forms.ModelForm):
 
 
 class PostitComments(forms.ModelForm):
-    class Meta: 
+    class Meta:
         model = Comment
         fields = ('comment', )
