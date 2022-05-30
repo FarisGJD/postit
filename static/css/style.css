@@ -665,23 +665,6 @@ textarea::placeholder {
     display: block;
 }
 
-/* #delete-defensive-container.remove {
-    display: none; 
-} */
-
-.fa-x {
-    font-size: 2rem;
-    text-shadow: 1px 1px #000000;
-    margin-top: 45px;
-    margin-right: 7px;
-    z-index: 2;
-}
-
-.fa-x:hover {
-    color: #000000;
-    text-shadow: 1px 1px #ffffff;
-}
-
 /* Allauth - Login, Signup & Logout */ 
 
 .allauth-heading-container {
