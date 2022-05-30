@@ -110,6 +110,14 @@ header li {
     cursor: pointer; 
 }
 
+/* Hamburger Navigation */ 
+
+.burger-menu-icon {
+    width: 50px; 
+    height: 50px;
+    background-color: #000000;
+}
+
 /* Footer */
 
 footer {
@@ -161,14 +169,14 @@ footer a {
     font-size: 1.8rem;
 }
 
-/* Home Page  */
 
-#trending-page-container {
+/* Home Page Latest */
+
+#latest-page-container {
     width: 100%;
     margin: auto;
 }
 
-/* Home Page Thread */
 
 .thread-content-container {
     width: 94%; 
