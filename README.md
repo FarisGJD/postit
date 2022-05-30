@@ -172,6 +172,8 @@ Using an MVT framework coupled with an Agile methodology proved to be extremely 
 ***
 # Testing 
 
+Both manual and automated tests were implemented to test the logic, responsiveness, compatibility, validation, feedback and confirmation during and after completion. Automated tests were implemented using test cases within project. Manual tests consisted of device and cross browsers compatibility as well as asking others. 
+
 **HTML Validation** 
 
 W3C Markup Validation Service was implementd to validate the HTML/tempaltes of the websites. The only errors that came about were due to tempalte variables being inlcuded in the HTML and the use of a base.html import which meant all but one of the pages had head tags. 
@@ -237,5 +239,5 @@ The app was deployed on Heroku by following these steps:
 
 # Notes 
 
-Unfortunately, my GitPod workspace which had 90% of my work completed was corrupted meaning I lost a huge amount of work as you will be able to tell from my repo commits and pushes. I have had to restart all over again and complete everything within a week. 
+Unfortunately, my GitPod workspace which had 90% of my work completed was corrupted meaning I lost a huge amount of work in terms of my project and README as you will be able to tell from my repo commits and pushes. I have had to restart all over again and complete everything within a week. 
 
