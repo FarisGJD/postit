@@ -206,11 +206,73 @@ footer a {
     transform: scale(1.1);
 }
 
-.thread1 {
+.thread-style {
     transform: rotate(-0.5deg);
     -webkit-transform: rotate(-0.5deg);
     -moz-transform: rotate(-0.5deg);
     background-color: #feff9c; 
+}
+
+.thread-style:nth-child(2) {
+    transform: rotate(0.5deg);
+    -webkit-transform: rotate(0.5deg);
+    -moz-transform: rotate(0.5deg);
+    background-color: #ff65a3;
+
+}
+
+.thread-style:nth-child(3){
+    transform: rotate(1.0deg);
+    -webkit-transform: rotate(1.0deg);
+    -moz-transform: rotate(1.0deg);
+    background-color: #7afcff;
+}
+
+.thread-style:nth-child(4){
+    transform: rotate(-1.0deg);
+    -webkit-transform: rotate(-1.0deg);
+    -moz-transform: rotate(-1.0deg);
+    background-color: #ffa930;
+
+}
+
+.thread-style:nth-child(5){
+    transform: rotate(-1.5deg);
+    -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    background-color: #74ed4b;
+
+}
+
+.thread-style:nth-child(6){
+    transform: rotate(1.5deg);
+    -webkit-transform: rotate(1.5deg);
+    -moz-transform: rotate(1.5deg);
+    background-color: #ff7455;
+
+}
+
+.thread-style:nth-child(7){
+    transform: rotate(2.0deg);
+    -webkit-transform: rotate(2.0deg);
+    -moz-transform: rotate(2.0deg);
+    background-color: #1ba8b1;
+
+}
+
+.thread-style:nth-child(8){
+    transform: rotate(-2.0deg);
+    -webkit-transform: rotate(-2.0deg);
+    -moz-transform: rotate(-2.0deg);
+    background-color: #ff0079;
+
+}
+
+.thread-style:nth-child(9){
+    transform: rotate(0.5deg);
+    -webkit-transform: rotate(0.5deg);
+    -moz-transform: rotate(0.5deg);
+    background-color: #dcff46;
 }
 
 .thread-meta-container{
